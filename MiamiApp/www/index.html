@@ -41,9 +41,12 @@
             <div id="deviceready" class="blink">
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
+				<img class="toggle" src="img/android-menu.png" onclick="toggle_sidebar()" style="position: fixed; right: 10px; top: 10px" />
+
+				<div id="sidebar" style="position: fixed; display: inline-block; top: 0px; height: 100%; width: 200px; left: -200px; background-color: black; transition: all 0.5s ease-in-out;">
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/sidebar.js"></script>
     </body>
 </html>
