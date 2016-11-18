@@ -1,6 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<merger version="3"><dataSet config="main"><source path="/home/stannajl/MiamiMobileApp/MiamiApp/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/stannajl/MiamiMobileApp/MiamiApp/platforms/android/CordovaLib/src/debug/shaders"/></dataSet></merger>
-=======
-<merger version="3"><dataSet config="main"><source path="/home/frazeeat/MiamiMobileApp/MiamiApp/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/frazeeat/MiamiMobileApp/MiamiApp/platforms/android/CordovaLib/src/debug/shaders"/></dataSet></merger>
->>>>>>> b2f78f356c055d62f69b1f99b568a2971f4f6468
+<merger version="3"><dataSet config="main"><source path="/home/wangj37/MiamiMobileApp/MiamiApp/platforms/android/CordovaLib/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/home/wangj37/MiamiMobileApp/MiamiApp/platforms/android/CordovaLib/src/debug/shaders"/></dataSet></merger>
