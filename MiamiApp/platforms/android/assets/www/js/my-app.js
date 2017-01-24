@@ -18,6 +18,50 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+/*
+$$(document).on('pageInit',function(e){
+	var page = e.detail.page;
+	if(page.name === 'map') {
+ var mu = {lat: 39.5105, lng: -84.7309};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: mu
+          });
+var marker = new google.maps.Marker({
+            position: mu,
+            map: map
+          });
+
+	}
+})
+*/
+
+
+
+/*
+myApp.onPageInit('map',function(page) {
+//<script>
+        function initMap(){
+          var mu = {lat: 39.5105, lng: -84.7309};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: mu
+          });
+          var marker = new google.maps.Marker({
+            position: mu,
+            map: map
+          });
+        }
+//</script>
+//<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIawavjxzyp3aI4ZEsNeJA4HcFfLwIoyM&callback=initMap">
+//</script>
+
+
+
+});
+*/
+
 // Generate dynamic page
 var dynamicPageIndex = 0;
 function createContentPage() {

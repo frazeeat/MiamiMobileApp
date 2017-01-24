@@ -1,3 +1,13 @@
+
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: mu
+          });
+          var marker = new google.maps.Marker({
+            position: mu,
+            map: map
+          });
+        }
 <div class="navbar">
   <div class="navbar-inner">
     <div class="left">
