@@ -18,6 +18,14 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+myApp.onPageInit('miamidirectory', function (page) {
+  // Do something here for "about" page
+  $$('.create-page').on('click', function () {
+        createContentPage();
+    });
+
+});
+
 // Generate dynamic page
 var dynamicPageIndex = 0;
 function createContentPage() {

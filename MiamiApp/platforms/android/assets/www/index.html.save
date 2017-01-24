@@ -24,7 +24,7 @@
     <div class="panel panel-left panel-reveal">
       <div class="content-block">
 	<div>
-          <a href="./map.html">Map</a>
+          <a href="./map.html">School Map</a>
         </div>
 	<div>
           <a href="./event.html">School Event</a>
@@ -39,13 +39,13 @@
         <a href="./dining.html">Dining Halls</a>
 	</div>
 	<div>
-        <a href="MiamiDirectory.html">Miami Directory</a>
+        <a href="./Mdirectory.html">Miami Directory</a>
 	</div>
 	<div>
         <a href="./banner.html">Banner Web</a>
 	</div>
 	<div>
-        <a href="login.html">Login</a>
+        <a href="./alumni.html">Alumni</a>
 	</div>
       </div>
     </div>
@@ -57,7 +57,7 @@
         <div class="navbar">
           <div class="navbar-inner">
             <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-            <div class="center sliding" style="text-align: center;">Miami University</div>
+            <div class="center sliding" style="left: 0px; text-align: center;">Miami University</div>
             <div class="left">
               <!-- 
                 Right link contains only icon - additional "icon-only" class
@@ -81,7 +81,7 @@
                             <a href="./banner.html" style="margin-top: 180px; margin-left: auto">Banner Web</a>
                         </div>
                         <div class="MDirectory" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: right; top:0px;">
-                            <a href="./MiamiDirectory.html" style="margin-top: 180px; margin-left: auto">Miami Directory</a>
+                            <a href="./Mdirectory.html" style="margin-top: 180px; margin-left: auto">Miami Directory</a>
                         </div>
                         <div class="Dining" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: left; top: 25px; left:0px">
                             <a href="./dining.html" style="margin-top: 180px; margin-left: auto">Dining Hall</a>
@@ -115,4 +115,9 @@
     <!-- Path to your app js-->
     <script type="text/javascript" src="./js/my-app.js"></script>
   </body>
+=======
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/sidebar.js"></script>
+    </body>
+>>>>>>> b2f78f356c055d62f69b1f99b568a2971f4f6468
 </html>
