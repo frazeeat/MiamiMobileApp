@@ -18,6 +18,15 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+<<<<<<< HEAD
+myApp.onPageInit('miamidirectory', function (page) {
+  // Do something here for "about" page
+  $$('.create-page').on('click', function () {
+        createContentPage();
+    });
+
+});
+=======
 /*
 $$(document).on('pageInit',function(e){
 	var page = e.detail.page;
@@ -61,6 +70,7 @@ myApp.onPageInit('map',function(page) {
 
 });
 */
+>>>>>>> 6aa76721dfa15780ba8d34600c76d907803f2114
 
 // Generate dynamic page
 var dynamicPageIndex = 0;

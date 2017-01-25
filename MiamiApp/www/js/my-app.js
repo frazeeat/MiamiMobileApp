@@ -18,6 +18,13 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+myApp.onPageInit('miamidirectory', function (page) {
+  // Do something here for "about" page
+  $$('.create-page').on('click', function () {
+        createContentPage();
+    });
+
+});
 /*
 $$(document).on('pageInit',function(e){
 	var page = e.detail.page;
