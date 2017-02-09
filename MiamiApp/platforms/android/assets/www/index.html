@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="./css/my-app.css">
     <!-- Path to map stylesheet-->
     <link rel="stylesheet" href="./css/map.css">
+	<!-- Path to home stylesheet-->
+    <link rel="stylesheet" href="./css/home.css">
   </head>
   <body>
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
@@ -26,7 +28,6 @@
     <div class="panel panel-left panel-reveal">
       <div class="content-block">
 	<div>
-          <a href="./map.html">Map</a>
           <a href="./newmap.html">School Map</a>
         </div>
 	<div>
@@ -42,7 +43,7 @@
         <a href="./dining.html">Dining Halls</a>
 	</div>
 	<div>
-        <a href="MiamiDirectory.html">Miami Directory</a>
+        <a href="./testMiamiDirectory.html">Miami Directory</a>
 	</div>
 	<div>
         <a href="./banner.html">Banner Web</a>
@@ -76,24 +77,30 @@
           <div data-page="index" class="page">
             <!-- Scrollable page content -->
             <div class="page-content">
-              <div class="box" style="width: 640px; height:430px; margin-top: 300px; margin-left: auto; margin-right: auto;">
-                        <div class="LocalNews" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: left; left: 0px;">
-                            <a href="./local.html" style="margin-top: 180px; margin-left: auto">Local News</a>
+              <div class="mainBox">
+                        <div class="subBox">
+                            <img id='mainIcons' src="./img/News.png" alt="news icon">
+                            <a href="./local.html">Local News</a>
                         </div>
-			<div class="Banner" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: left; left: 15px; top: 0px;">
-                            <a href="./banner.html" style="margin-top: 180px; margin-left: auto">Banner Web</a>
+						<div class="subBox">
+
+                            <a href="./banner.html">Banner Web</a>
                         </div>
-                        <div class="MDirectory" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: right; top:0px;">
-                            <a href="./MiamiDirectory.html" style="margin-top: 180px; margin-left: auto">Miami Directory</a>
+                        <div class="subBox">
+                            <img id='mainIcons' src="./img/miami.jpg" alt="md icon">
+                            <a href="./testMiamiDirectory.html">Miami Directory</a>
                         </div>
-                        <div class="Dining" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: left; top: 25px; left:0px">
-                            <a href="./dining.html" style="margin-top: 180px; margin-left: auto">Dining Hall</a>
+                        <div class="subBox">
+                            <img id='mainIcons' src="./img/dining.png" alt="dining icon">
+                            <a href="./dining.html">Dining Hall</a>
                         </div>
-                        <div class="Mmap" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: left; top: 25px; left: 15px;">
-                            <a href="./map.html" style="margin-top: 180px; margin-left: auto">Campus Map</a>
+                        <div class="subBox">
+                            <img id='mainIcons' src="./img/map.png" alt="map icon">
+                            <a href="./map.html">Campus Map</a>
                         </div>
-                        <div class="Msports" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: right; top: 25px;">
-                            <a href="./sports.html" style="margin-top: 180px; margin-left: auto">Sports News</a>
+                        <div class="subBox">
+                            <img id='mainIcons' src="./img/sport.png" alt="news icon">
+                            <a href="./sports.html" >Sports News</a>
                         </div>
 
               </div>
