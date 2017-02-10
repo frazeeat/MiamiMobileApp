@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Miami Directory</title>
+    <link rel="stylesheet" href="./css/md.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="view">
+        <div class="mdpage">
+            <div class="mdpage" data-page="miamidirectory">
+                <div class="page-content">
+                    <div class="icon">
+                        <img src="./img/miami.jpg">
+                        <h1 class="detail">Miami <span class="name">Directory</span> </h1>
+                    </div>
+                    <div class="search">
+                        <label for="dropdown">Search</label>
+                        <select  id="dropdown">
+                            <option value="People">People</option>
+                            <option value="Organization">Organization</option>
+                        </select>
+                    </div>
+                    <div class="for">
+                        <label for="fname">For</label>
+                        <input type="text" id="fname" placeholder="Full Name Or Unique ID" name="fname" required>
+                    </div>
+                    <div class="searchbutton">
+                        <button id = "button" class="button" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+            <ul class="pager">
+               <li class="back"><a href="./index.html">Home</a></li>
+            </ul>            
+        </div>
+    </div>
+</body>
+</html>
