@@ -1,0 +1,53 @@
+.LocalNews {
+    width: 30%;
+    height: 50%;
+    position: relative;
+    float: left;
+    left: 0px;
+}
+.Banner {
+    width: 30%;
+    height: 50%;
+    position: relative;
+    float: left;
+    left: 15px;
+    top: 0px;
+}
+.MDirectory {
+    width: 30%;
+    height: 50%;
+    position: relative;
+    float: right;
+    top:0px;
+}
+.Dining {
+    width: 30%;
+    height: 50%;
+    position: relative;
+    float: left;
+    top: 25px;
+    left:0px
+}
+.Mmap {
+    width: 30%;
+    height: 50%;
+    position: relative;
+    float: left;
+    top: 25px;
+    left: 15px;
+}
+.Msports{
+    width: 30%;
+    height: 50%;
+    position: relative;
+    float: right;
+    top: 25px;
+}
+.box {
+    width: 90%;
+    height:40%;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
