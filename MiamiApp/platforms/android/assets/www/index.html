@@ -16,7 +16,12 @@
     <link rel="stylesheet" href="./css/my-app.css">
     <!-- Path to map stylesheet-->
     <link rel="stylesheet" href="./css/map.css">
+<<<<<<< HEAD
 
+=======
+	<!-- Path to home stylesheet-->
+    <link rel="stylesheet" href="./css/home.css">
+>>>>>>> 090ef8239d4568344c1a85add5f34fad022a605c
   </head>
   <body>
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
@@ -39,10 +44,13 @@
         <a href="./dining.html">Dining Halls</a>
 	</div>
 	<div>
-        <a href="./testMiamiDirectory.html">Miami Directory</a>
+        <a href="./md.html">Miami Directory</a>
 	</div>
 	<div>
         <a href="./banner.html">Banner Web</a>
+	</div>
+	<div>
+		<a href="./library.html">Library Database</a>
 	</div>
 	<div>
         <a href="login.html">Login</a>
@@ -57,12 +65,11 @@
         <div class="navbar">
           <div class="navbar-inner">
             <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
-            <div class="center sliding" style="text-align: center;">Miami University</div>
             <div class="left">
-              <!-- 
-                Right link contains only icon - additional "icon-only" class
-                Additional "open-panel" class tells app to open panel when we click on this link
-              -->
+              <a href="about.html">About app</a>
+            </div>
+            <div class="center">Miami University</div>
+            <div class="right">
               <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
             </div>
           </div>
@@ -73,36 +80,38 @@
           <div data-page="index" class="page">
             <!-- Scrollable page content -->
             <div class="page-content">
-              <div class="box" style="width: 640px; height:430px; margin-top: 300px; margin-left: auto; margin-right: auto;">
-                        <div class="LocalNews" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: left; left: 0px;">
-                            <img src="./img/News.png" alt="news icon" style="width:200px;height:200px;">
-                            <a href="./local.html" style="margin-top: 180px; margin-left: auto">Local News</a>
+              <div class="mainBox">
+                        <div class="subBox">
+                            <img id='mainIcons' src="./img/News.png" alt="news icon">
+                            <a href="./local.html">Local News</a>
                         </div>
-			<div class="Banner" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: left; left: 15px; top: 0px;">
-
-                            <a href="./banner.html" style="margin-top: 180px; margin-left: auto">Banner Web</a>
+						<div class="subBox">
+                            <a href="./banner.html">Banner Web</a>
                         </div>
-                        <div class="MDirectory" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: right; top:0px;">
-                            <img src="./img/miami.jpg" alt="md icon" style="width:200px;height:200px;">
-                            <a href="./testMiamiDirectory.html" style="margin-top: 180px; margin-left: auto">Miami Directory</a>
+                        <div class="subBox">
+                            <img id='mainIcons' src="./img/miami.jpg" alt="md icon">
+                            <a href="./testMiamiDirectory.html">Miami Directory</a>
                         </div>
-                        <div class="Dining" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: left; top: 25px; left:0px">
-                            <img src="./img/dining.png" alt="dining icon" style="width:200px;height:200px;">
-                            <a href="./dining.html" style="margin-top: 180px; margin-left: auto">Dining Hall</a>
+                        <div class="subBox">
+                            <img id='mainIcons' src="./img/dining.png" alt="dining icon">
+                            <a href="./dining.html">Dining Hall</a>
                         </div>
+<<<<<<< HEAD
                         <div class="Mmap" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: left; top: 25px; left: 15px;">
                             <a href="./map.html"> <img src="./img/map.png" alt="map icon" style="width:200px;height:200px;"></a>
                             <a href="./map.html" style="margin-top: 180px; margin-left: auto">Campus Map</a>
+=======
+                        <div class="subBox">
+                            <img id='mainIcons' src="./img/map.png" alt="map icon">
+                            <a href="./map.html">Campus Map</a>
+>>>>>>> 090ef8239d4568344c1a85add5f34fad022a605c
                         </div>
-                        <div class="Msports" style="width: 200px; height: 200px; border-style: groove; border-color: #6d6d6d; position: relative; float: right; top: 25px;">
-                            <img src="./img/sport.png" alt="news icon" style="width:200px;height:200px;">
-                            <a href="./sports.html" style="margin-top: 180px; margin-left: auto">Sports News</a>
+                        <div class="subBox">
+                            <img id='mainIcons' src="./img/sport.png" alt="news icon">
+                            <a href="./sports.html" >Sports News</a>
                         </div>
 
-              </div>
-              
-              <!-- Link to another page -->
-              <a href="about.html">About app</a>
+              </div>              
             </div>
           </div>
         </div>
@@ -111,7 +120,7 @@
           <div class="toolbar-inner">
             <!-- Toolbar links -->
             <a href="#" class="link">great gramphics</a>
-            <a href="#" class="link">great grameplay</a>
+            <a href="index.html" class="link">Home</a>
           </div>
         </div>
       </div>
