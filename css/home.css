@@ -1,0 +1,16 @@
+.mainBox{
+	width:100%;
+	top-padding:25%;
+	bottom-padding:25%;
+}
+
+.subBox{
+	display: inline-block;
+	height:20%;
+	width:20%;
+}
+
+#mainIcons{	
+	max-width: 100%;
+	height: auto;
+}
