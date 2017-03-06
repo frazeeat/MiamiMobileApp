@@ -31,6 +31,25 @@ $$(document).on('pageInit', function (page) {
                 var url = 'http://community.miamioh.edu/ph/search.php?search=' + input + '&style=section';
                 window.location.href = url;
    });
+   $$("#signIn").on('click', function(){
+ 	var username = $$("#usr").val();
+        var password = $$("#pwd").val();
+ 	if(!password && !username){
+            myApp.alert('Please fill in the username and password','Miami App');
+            return;
+         }else if(!username){
+	   myApp.alert('Please fill in the username','Miami App');
+ 	   return;
+         }else if(!password){
+	   myApp.alert('Please fill in the password','Miami App');
+ 	   return;
+ 	}else{
+	   myApp.alert('succeed','Miami App');
+ 	   return;
+ 	}
+ 
+    })
+
 
 });
 /*
