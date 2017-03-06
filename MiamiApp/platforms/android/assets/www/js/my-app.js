@@ -51,6 +51,22 @@ $$(document).on('pageInit', function (page) {
     })
 
 
+//	$$('#Load').load('https://muidp.miamioh.edu/cas/login');
+
+/*        $$.ajax({
+                dataType:'html',
+                url: 'https://muidp.miamioh.edu/cas/login',
+                success: function(data) {
+                        $('#ajax').html($(data).children());
+                },
+                error: function(err) {
+                        console.log("ERROR");
+                        console.log(err);
+
+                }
+        });
+*/
+
 });
 /*
 $$(document).on('pageInit',function(e){
