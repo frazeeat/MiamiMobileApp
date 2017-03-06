@@ -18,11 +18,37 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
-myApp.onPageInit('miamidirectory', function (page) {
+$$(document).on('pageInit', function (page) {
   // Do something here for "about" page
-  $$('.create-page').on('click', function () {
-        createContentPage();
-    });
+   $$("#sub").on('click', function(){
+                console.log("I am clicked");
+                var input = $$('#na').val();
+                if(!input) {
+                   myApp.alert('Please fill in the field');
+                   return;
+                }
+                console.log(input);
+                var url = 'http://community.miamioh.edu/ph/search.php?search=' + input + '&style=section';
+                window.location.href = url;
+   });
+   $$("#signIn").on('click', function(){
+	var username = $$("#usr").val();
+        var password = $$("#pwd").val();
+	if(!password && !username){
+           myApp.alert('Please fill in the username and password');
+           return;
+        }else if(!username){
+	   myApp.alert('Please fill in the username');
+	   return;
+        }else if(!password){
+	   myApp.alert('Please fill in the password');
+	   return;
+	}else{
+	   myApp.alert(username + " " + password);
+	   return;
+	}
+
+   })
 
 });
 /*
@@ -97,3 +123,4 @@ function createContentPage() {
     );
 	return;
 }
+
