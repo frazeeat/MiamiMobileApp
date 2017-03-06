@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data:">
+
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
     <!-- Your app title -->
     <title>Miami University</title>
     <!-- Path to Framework7 iOS CSS theme styles-->
@@ -108,8 +111,12 @@
         <div class="toolbar">
           <div class="toolbar-inner">
             <!-- Toolbar links -->
-            <a href="#" class="link">great gramphics</a>
-            <a href="index.html" class="link">Home</a>
+            <!-- <a href="https://muidp.miamioh.edu/cas/login?service=https%3A%2F%2Fmymiami.miamioh.edu%2Fc%2Fportal%2Flogin%3Fp_l_id%3D10184"  class="link">CAS login</a> -->
+        <!--     <a href="https://muidp.miamioh.edu/cas/login"  class="link">CAS login</a> -->
+        <!--    <a href="https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" target="_blank"  class="link">CAS login</a> -->
+
+	    <a href="caslogin.html" id="caslogin" class="link">CAS login </a> 
+	    <a href="index.html" class="link">Home</a>
           </div>
         </div>
       </div>

@@ -8,6 +8,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data:">
 
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 
     <!-- Your app title -->
     <title>Miami University</title>
@@ -115,7 +116,7 @@
         <!--     <a href="https://muidp.miamioh.edu/cas/login"  class="link">CAS login</a> -->
         <!--    <a href="https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" target="_blank"  class="link">CAS login</a> -->
 
-	    <a href="caslogin.html" id="caslogin" class="link">CAS login </a> 
+	    <a href="caslogin.html" class="link">CAS login </a> XX
 	    <a href="index.html" class="link">Home</a>
           </div>
         </div>
