@@ -123,3 +123,10 @@ h1 {
 	height: auto;
 }
 
+.panel-left{
+	background-color: white;
+}
+
+.panel-left > a {
+	border: 10px;
+}
