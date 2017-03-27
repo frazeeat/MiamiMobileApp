@@ -18,6 +18,7 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+<<<<<<< HEAD
 myApp.onPageInit('caslogin',function (page) {
 	
 /*    $$('.create-page').on('click', function () {
@@ -33,6 +34,8 @@ myApp.onPageInit('caslogin',function (page) {
         }, false);
 
 });
+=======
+>>>>>>> fc1d880f48be53400ff4ef2bd9596b41672ffced
 
 $$(document).on('pageInit', function (page) {
   // Do something here for "about" page
@@ -44,8 +47,16 @@ $$(document).on('pageInit', function (page) {
                    return;
                 }
                 console.log(input);
-                var url = 'http://community.miamioh.edu/ph/search.php?search=' + input + '&style=section';
-                window.location.href = url;
+	   	var url = 'http://community.miamioh.edu/ph/search.php';
+		$$.get(url, {search:input}, function (data) {
+			var newPageContent = 
+			'<div class="page" data-page="my-page">' +
+                            '<div class="page-content">' +
+			   	 data +
+                            '</div>' +
+                        '</div>';
+                        mainView.router.loadContent(newPageContent);
+		});
    });
    $$("#signIn").on('click', function(){
  	var username = $$("#usr").val();
