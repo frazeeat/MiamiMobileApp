@@ -18,7 +18,8 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
-<<<<<<< HEAD
+
+
 myApp.onPageInit('caslogin',function (page) {
 	
 /*    $$('.create-page').on('click', function () {
@@ -34,8 +35,6 @@ myApp.onPageInit('caslogin',function (page) {
         }, false);
 
 });
-=======
->>>>>>> fc1d880f48be53400ff4ef2bd9596b41672ffced
 
 $$(document).on('pageInit', function (page) {
   // Do something here for "about" page
