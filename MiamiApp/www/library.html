@@ -1,4 +1,5 @@
-v class="navbar">
+class="navbar">
+<head>
   <div class="navbar-inner">
 	<div class="left">
 	 <a href="#" class="back link">
@@ -12,33 +13,25 @@ v class="navbar">
 	       </div> <!-- end div right -->
 		  </div> <!-- end div nav-bar inner -->
 		 </div> <!-- end div navbar -->
-			    <div class="pages">
+		<script type="text/javascript" src="./js/librarysearch.js"></script>
+</head>
+
+ <body>	   
+		 <div class="pages">
 			     <div data-page="Library Database" class="page"> <!-- page title -->
 				  <div class="page-content">
 				   <div class="content-block">
-                      
-			     	<form action="Testing Title">
-					Search: <input type="text" name="user"><br>
-					</form>					
-					
-					<select>
-							<option value="book">Books</option>
-							<option value="journal">Journals</option>
-							<option value="movie">Movies</option>
-							<option value="audioRecordings">Audio Recordings</option>
-					</select>
-
-					<select>
-							<option value="classic">Classic Catalog</option>
-							<option value="ohioLINK">Ohio LINK</option>
-							<option value="onlineJR">Online Journals/Resources</option>
-							<option value="lanePublic">Lane Public</option>
-							<option value="worldCat">World Cat</option>
-					</select>
 						
+						<form name="search_form">	   
+							<input name="searchBox" id="searchMeHard" type="text" placeholder="..." value="">
+							<button type="submit" onclick="getText()">Search</button>
+						</form>
+						
+						<p id="demo"> </p>
+
 				   </div> <!-- end div pages --> 
 				  </div> <!-- end div library database -->
 				 </div> <!-- end div page content -->
 				</div> <!-- end div content block -->
-
+ </body>
 
