@@ -18,6 +18,22 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+myApp.onPageInit('caslogin',function (page) {
+	
+/*    $$('.create-page').on('click', function () {
+        createContentPage();
+    });
+*/
+	console.log("reached caslogin.");
+
+        window.addEventListener("message",
+        function(e){
+                if(e.origin !== 'https://muidp.miamioh.edu/cas/login') {return;}
+                alert("**session**"+e.data);
+        }, false);
+
+});
+
 $$(document).on('pageInit', function (page) {
   // Do something here for "about" page
    $$("#sub").on('click', function(){
@@ -31,67 +47,31 @@ $$(document).on('pageInit', function (page) {
                 var url = 'http://community.miamioh.edu/ph/search.php?search=' + input + '&style=section';
                 window.location.href = url;
    });
-
-//	$$('#Load').load('https://muidp.miamioh.edu/cas/login');
-
-/*        $$.ajax({
-                dataType:'html',
-                url: 'https://muidp.miamioh.edu/cas/login',
-                success: function(data) {
-                        $('#ajax').html($(data).children());
-                },
-                error: function(err) {
-                        console.log("ERROR");
-                        console.log(err);
-
-                }
-        });
-*/
-
-});
-/*
-$$(document).on('pageInit',function(e){
-	var page = e.detail.page;
-	if(page.name === 'map') {
- var mu = {lat: 39.5105, lng: -84.7309};
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
-            center: mu
-          });
-var marker = new google.maps.Marker({
-            position: mu,
-            map: map
-          });
-
-	}
-})
-*/
+   $$("#signIn").on('click', function(){
+ 	var username = $$("#usr").val();
+        var password = $$("#pwd").val();
+ 	if(!password && !username){
+            myApp.alert('Please fill in the username and password','Miami App');
+            return;
+         }else if(!username){
+	   myApp.alert('Please fill in the username','Miami App');
+ 	   return;
+         }else if(!password){
+	   myApp.alert('Please fill in the password','Miami App');
+ 	   return;
+ 	}else{
+	   myApp.alert('succeed','Miami App');
+ 	   return;
+ 	}
+ 
+    })
 
 
 
-/*
-myApp.onPageInit('map',function(page) {
-//<script>
-        function initMap(){
-          var mu = {lat: 39.5105, lng: -84.7309};
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
-            center: mu
-          });
-          var marker = new google.maps.Marker({
-            position: mu,
-            map: map
-          });
-        }
-//</script>
-//<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIawavjxzyp3aI4ZEsNeJA4HcFfLwIoyM&callback=initMap">
-//</script>
-
+	
 
 
 });
-*/
 
 // Generate dynamic page
 var dynamicPageIndex = 0;
