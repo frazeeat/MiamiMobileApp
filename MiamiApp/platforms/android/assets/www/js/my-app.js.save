@@ -18,8 +18,6 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
-
-
 myApp.onPageInit('caslogin',function (page) {
 	
 /*    $$('.create-page').on('click', function () {
@@ -46,16 +44,8 @@ $$(document).on('pageInit', function (page) {
                    return;
                 }
                 console.log(input);
-	   	var url = 'http://community.miamioh.edu/ph/search.php';
-		$$.get(url, {search:input}, function (data) {
-			var newPageContent = 
-			'<div class="page" data-page="my-page">' +
-                            '<div class="page-content">' +
-			   	 data +
-                            '</div>' +
-                        '</div>';
-                        mainView.router.loadContent(newPageContent);
-		});
+                var url = 'http://community.miamioh.edu/ph/search.php?search=' + input + '&style=section';
+                window.location.href = url;
    });
    $$("#signIn").on('click', function(){
  	var username = $$("#usr").val();
