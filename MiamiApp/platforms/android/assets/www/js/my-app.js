@@ -24,6 +24,23 @@ var mySearchbar = myApp.searchbar('.searchbar', {
 });  
 
 
+
+myApp.onPageInit('caslogin',function (page) {
+	
+/*    $$('.create-page').on('click', function () {
+        createContentPage();
+    });
+*/
+	console.log("reached caslogin.");
+
+        window.addEventListener("message",
+        function(e){
+                if(e.origin !== 'https://muidp.miamioh.edu/cas/login') {return;}
+                alert("**session**"+e.data);
+        }, false);
+
+});
+
 $$(document).on('pageInit', function (page) {
   // Do something here for "about" page
    $$("#sub").on('click', function(){
@@ -62,69 +79,21 @@ $$(document).on('pageInit', function (page) {
  	   return;
  	}
  
-    })
+   });
 
-
-//	$$('#Load').load('https://muidp.miamioh.edu/cas/login');
-
-/*        $$.ajax({
-                dataType:'html',
-                url: 'https://muidp.miamioh.edu/cas/login',
-                success: function(data) {
-                        $('#ajax').html($(data).children());
-                },
-                error: function(err) {
-                        console.log("ERROR");
-                        console.log(err);
-
+   $$("#search").on('click', function(){
+                console.log("search button clicked");
+                var input = $$('#searchTerms').val();
+                if(!input) {
+                   myApp.alert('Please enter at least one term');
+                   return;
                 }
-        });
-*/
+                console.log(input);
+   
+   });
 
 });
-/*
-$$(document).on('pageInit',function(e){
-	var page = e.detail.page;
-	if(page.name === 'map') {
- var mu = {lat: 39.5105, lng: -84.7309};
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
-            center: mu
-          });
-var marker = new google.maps.Marker({
-            position: mu,
-            map: map
-          });
 
-	}
-})
-*/
-
-
-
-/*
-myApp.onPageInit('map',function(page) {
-//<script>
-        function initMap(){
-          var mu = {lat: 39.5105, lng: -84.7309};
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
-            center: mu
-          });
-          var marker = new google.maps.Marker({
-            position: mu,
-            map: map
-          });
-        }
-//</script>
-//<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIawavjxzyp3aI4ZEsNeJA4HcFfLwIoyM&callback=initMap">
-//</script>
-
-
-
-});
-*/
 
 // Generate dynamic page
 var dynamicPageIndex = 0;
