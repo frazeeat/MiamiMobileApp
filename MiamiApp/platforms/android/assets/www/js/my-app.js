@@ -74,14 +74,21 @@ $$(document).on('pageInit', function (page) {
  	   return;
  	}
  
-    })
+   });
 
-
-
-	
-
+   $$("#search").on('click', function(){
+                console.log("search button clicked");
+                var input = $$('#searchTerms').val();
+                if(!input) {
+                   myApp.alert('Please enter at least one term');
+                   return;
+                }
+                console.log(input);
+   
+   });
 
 });
+
 
 // Generate dynamic page
 var dynamicPageIndex = 0;
