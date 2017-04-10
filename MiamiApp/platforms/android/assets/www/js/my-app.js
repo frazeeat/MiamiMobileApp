@@ -18,6 +18,11 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+var mySearchbar = myApp.searchbar('.searchbar', {
+		    searchList: '.list-block-search',
+			    searchIn: '.item-title'
+});  
+
 
 $$(document).on('pageInit', function (page) {
   // Do something here for "about" page
@@ -150,3 +155,8 @@ function createContentPage() {
 	return;
 }
 
+function getDate(){
+	var ele = document.getElementById('display');
+	var dt = Date();
+	ele.innerHTML = dt;
+}
