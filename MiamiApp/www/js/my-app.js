@@ -15,13 +15,7 @@ myApp.onPageInit('about', function (page) {
     $$('.create-page').on('click', function () {
         createContentPage();
     });
-});
-
-var mySearchbar = myApp.searchbar('.searchbar', {
-		    searchList: '.list-block-search',
-			    searchIn: '.item-title'
-});  
-
+}); 
 
 
 myApp.onPageInit('caslogin',function (page) {
