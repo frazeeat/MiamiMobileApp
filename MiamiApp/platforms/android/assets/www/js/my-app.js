@@ -3,7 +3,6 @@ var myApp = new Framework7();
 
 // Export selectors engine
 var $$ = Dom7;
-
 // Add view
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
@@ -37,6 +36,25 @@ myApp.onPageInit('caslogin',function (page) {
 
 $$(document).on('pageInit', function (page) {
   // Do something here for "about" page
+  // var urlForNews = "http://miamioh.edu/news/listings/listing_campus-news.php"
+  // $$.get(urlForNews, function(data){
+     // console.log("Getting Data Successfully...");
+     // var xmlValue = $j.xml(data)
+     // var title = data.find("title");
+     // console.log(title);
+  // });
+   $$("#newsLink").on('click', function(){
+	var url = 'http://miamioh.edu/news/campus-news/2017/04/silvoor-sanctuary.html';
+        $$.get(url, function (data) {
+                        var newPageContent =
+                        '<div class="page" data-page="my-page">' +
+                            '<div class="page-content">' +
+                                 data +
+                            '</div>' +
+                        '</div>';
+                        mainView.router.loadContent(newPageContent);
+         });
+   });
    $$("#sub").on('click', function(){
                 console.log("I am clicked");
                 var input = $$('#na').val();
@@ -73,7 +91,15 @@ $$(document).on('pageInit', function (page) {
  	   return;
  	}
  
+<<<<<<< HEAD
+    });
+
+
+
+	
+=======
    });
+>>>>>>> fdb5202e47cfe5096bbaa8ddc2541fae1c101b8c
 
    $$("#search").on('click', function(){
                 console.log("search button clicked");
