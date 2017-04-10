@@ -91,15 +91,7 @@ $$(document).on('pageInit', function (page) {
  	   return;
  	}
  
-<<<<<<< HEAD
     });
-
-
-
-	
-=======
-   });
->>>>>>> fdb5202e47cfe5096bbaa8ddc2541fae1c101b8c
 
    $$("#search").on('click', function(){
                 console.log("search button clicked");
