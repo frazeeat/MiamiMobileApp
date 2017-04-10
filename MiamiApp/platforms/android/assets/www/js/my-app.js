@@ -17,6 +17,11 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+var mySearchbar = myApp.searchbar('.searchbar', {
+		    searchList: '.list-block-search',
+			    searchIn: '.item-title'
+});  
+
 
 
 myApp.onPageInit('caslogin',function (page) {
@@ -92,14 +97,29 @@ $$(document).on('pageInit', function (page) {
  	   return;
  	}
  
+<<<<<<< HEAD
     });
 
 
 
 	
+=======
+   });
+>>>>>>> fdb5202e47cfe5096bbaa8ddc2541fae1c101b8c
 
+   $$("#search").on('click', function(){
+                console.log("search button clicked");
+                var input = $$('#searchTerms').val();
+                if(!input) {
+                   myApp.alert('Please enter at least one term');
+                   return;
+                }
+                console.log(input);
+   
+   });
 
 });
+
 
 // Generate dynamic page
 var dynamicPageIndex = 0;
@@ -130,3 +150,8 @@ function createContentPage() {
 	return;
 }
 
+function getDate(){
+	var ele = document.getElementById('display');
+	var dt = Date();
+	ele.innerHTML = dt;
+}

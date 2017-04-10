@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script type="text/javascript">
+    window.onload = function() {
+    if (window.jQuery) {  
+        // jQuery is loaded  
+        alert("Yeah!");
+    } else {
+        // jQuery is not loaded
+        alert("Doesn't Work");
+    }
+	}  
+    </script>	
     <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -98,11 +109,11 @@
           <div class="navbar-inner">
             <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
             <div class="left">
-              <a href="about.html">About app</a>
+              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
             </div>
             <div class="center">Miami University</div>
             <div class="right">
-              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+	      <a href="about.html">About app</a>
             </div>
           </div>
         </div>
@@ -124,7 +135,7 @@
 							</a>
                         </div>
                         <div class="col-33">
-                           <a href="./testMiamiDirectory.html">
+                           <a href="./miamidirectory.html">
 						   		 <img id='mainIcons' src="./img/directory.svg" alt="md icon">
 						   </a>
                         </div>
@@ -169,5 +180,6 @@
     <script type="text/javascript" src="./js/framework7.min.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="./js/my-app.js"></script>
+	<script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
   </body>
 </html>
