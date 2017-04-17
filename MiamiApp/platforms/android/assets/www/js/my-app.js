@@ -15,7 +15,6 @@ myApp.onPageInit('about', function (page) {
     $$('.create-page').on('click', function () {
         createContentPage();
     });
-<<<<<<< HEAD
 });
 
 // Notificaiton.
@@ -44,15 +43,6 @@ var mySearchbar = myApp.searchbar('.searchbar', {
 			    searchIn: '.item-title'
 });  
 
-=======
-<<<<<<< HEAD
-});
-
-
-=======
-}); 
->>>>>>> 528b3a18810a2e328547a945937925ff73957680
->>>>>>> e1ec83d0f54d8e2c7d702aba315d29ee2b298760
 
 
 myApp.onPageInit('caslogin',function (page) {
