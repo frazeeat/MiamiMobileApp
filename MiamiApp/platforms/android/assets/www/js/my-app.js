@@ -15,12 +15,38 @@ myApp.onPageInit('about', function (page) {
     $$('.create-page').on('click', function () {
         createContentPage();
     });
-}); 
+});
+
+// Notificaiton.
+myApp.onPageInit('index',function(page){
+	console.log("what even?");
+
+});
+
+$$('.notification-custom').on('click', function () {
+    myApp.addNotification({
+        message: 'Not logged in yet?',
+        button: {
+            text: 'Click me',
+            color: 'yellow',
+	    close: true
+        }
+/*,	onClose: function(){
+		myApp.alert('woo!');
+	}
+*/
+    });
+});
+
+var mySearchbar = myApp.searchbar('.searchbar', {
+		    searchList: '.list-block-search',
+			    searchIn: '.item-title'
+});  
+
 
 
 myApp.onPageInit('caslogin',function (page) {
-	
-/*    $$('.create-page').on('click', function () {
+	/*    $$('.create-page').on('click', function () {
         createContentPage();
     });
 */
@@ -55,6 +81,8 @@ $$(document).on('pageInit', function (page) {
                         mainView.router.loadContent(newPageContent);
          });
    });
+
+
    $$("#sub").on('click', function(){
                 console.log("I am clicked");
                 var input = $$('#na').val();
