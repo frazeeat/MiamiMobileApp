@@ -237,11 +237,7 @@ $$(document).on('pageInit', function (page) {
                 mainView.router.loadContent(newCardContent);
          });
    });
-<<<<<<< HEAD
 
-=======
-   
->>>>>>> e1ec83d0f54d8e2c7d702aba315d29ee2b298760
 
    $$("#sub").on('click', function(){
                 var input = $$('#na').val();
