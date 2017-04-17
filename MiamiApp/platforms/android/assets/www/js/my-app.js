@@ -15,13 +15,9 @@ myApp.onPageInit('about', function (page) {
     $$('.create-page').on('click', function () {
         createContentPage();
     });
-<<<<<<< HEAD
 });
 
 
-=======
-}); 
->>>>>>> 528b3a18810a2e328547a945937925ff73957680
 
 
 myApp.onPageInit('caslogin',function (page) {
