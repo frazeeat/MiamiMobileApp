@@ -43,7 +43,11 @@ var mySearchbar = myApp.searchbar('.searchbar', {
 			    searchIn: '.item-title'
 });  
 
-
+myApp.onPageInit('library', function(page){
+			$$.get('https://www.lib.miamioh.edu', {}, function(data){
+							$$('#LIB_HERE').html(data);
+					});
+		)};
 
 myApp.onPageInit('caslogin',function (page) {
 	/*    $$('.create-page').on('click', function () {
