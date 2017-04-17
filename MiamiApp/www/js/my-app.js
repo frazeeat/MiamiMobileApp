@@ -58,8 +58,7 @@ myApp.onPageInit('caslogin',function (page) {
                 alert("**session**"+e.data);
         }, false);
 
-});
-
+     });
 $$(document).on('pageInit', function (page) {
   // Do something here for "about" page
   // var urlForNews = "http://miamioh.edu/news/listings/listing_campus-news.php"
@@ -69,28 +68,187 @@ $$(document).on('pageInit', function (page) {
      // var title = data.find("title");
      // console.log(title);
   // });
-   $$("#newsLink").on('click', function(){
-	var url = 'http://miamioh.edu/news/campus-news/2017/04/silvoor-sanctuary.html';
+    $$(".ac-1").on('click', function(){
+        var url = 'http://miamioh.edu/news/listings/arts-rss.php';
         $$.get(url, function (data) {
-                        var newPageContent =
-                        '<div class="page" data-page="my-page">' +
+                var xmlDoc = $.parseXML(data);
+                var $xml = $(xmlDoc);
+                var $item = $xml.find("item");
+                var newCardContent = '<div class="page" data-page="my-page">' +
                             '<div class="page-content">' +
-                                 data +
+                            '<div class="content-block-title">Art News</div>';
+                $item.each(function(){
+                        var title = $(this).find("title").text();
+                        var description = $(this).find("description").text();
+                        var pubDate = $(this).find("pubDate").text();
+                        var link = $(this).find("link").text();
+                        newCardContent +=
+                   '<div class="card">' +
+                        '<div  class="card-header">' +
+                                title +
+                        '</div>' +
+                        '<div class="card-content">' +
+                            '<div class="card-content-inner">' +
+                                '<p class="color-gray">' +
+                                pubDate +
+                                '</p>' +
+                                '<p>' +
+                                description +
+                                '</p>' +
                             '</div>' +
+                        '</div>' +
+                        '<div class="card-footer">' +
+                            '<a href="' +
+                                link +
+                            '">Read more</a>' +
+                        '</div>' +
+                   '</div>';
+                });
+                newCardContent += '</div>' +
+                                '</div>' +
                         '</div>';
-                        mainView.router.loadContent(newPageContent);
+                mainView.router.loadContent(newCardContent);
          });
    });
 
+   $$(".ac-2").on('click', function(){
+	var url = 'http://miamioh.edu/news/listings/listing_campus-news.php';
+        $$.get(url, function (data) {
+		var xmlDoc = $.parseXML(data);
+		var $xml = $(xmlDoc);
+		var $item = $xml.find("item");
+		var newCardContent = '<div class="page" data-page="my-page">' +
+                            '<div class="page-content">' +
+			    '<div class="content-block-title">Campus News</div>';
+		$item.each(function(){
+			var title = $(this).find("title").text();
+			var description = $(this).find("description").text();
+			var pubDate = $(this).find("pubDate").text();
+			var link = $(this).find("link").text();
+			newCardContent +=
+                   '<div class="card">' +
+                        '<div  class="card-header">' +
+                                title +
+                        '</div>' +
+                        '<div class="card-content">' +
+                            '<div class="card-content-inner">' +
+                                '<p class="color-gray">' +
+                                pubDate +
+                                '</p>' +
+                                '<p>' +
+                                description +
+                                '</p>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="card-footer">' +
+                            '<a href="' +
+				link + 
+			    '">Read more</a>' +
+                        '</div>' +
+                   '</div>';
+		});
+		newCardContent += '</div>' + 
+				'</div>' +
+                        '</div>'; 
+		mainView.router.loadContent(newCardContent);
+         });
+   });
+   $$(".ac-3").on('click', function(){
+        var url = 'http://miamioh.edu/news/listings/provost-rss.php';
+        $$.get(url, function (data) {
+                var xmlDoc = $.parseXML(data);
+                var $xml = $(xmlDoc);
+                var $item = $xml.find("item");
+                var newCardContent = '<div class="page" data-page="my-page">' +
+                            '<div class="page-content">' +
+                            '<div class="content-block-title">Provost News</div>';
+                $item.each(function(){
+                        var title = $(this).find("title").text();
+                        var description = $(this).find("description").text();
+                        var pubDate = $(this).find("pubDate").text();
+                        var link = $(this).find("link").text();
+                        newCardContent +=
+                   '<div class="card">' +
+                        '<div  class="card-header">' +
+                                title +
+                        '</div>' +
+                        '<div class="card-content">' +
+                            '<div class="card-content-inner">' +
+                                '<p class="color-gray">' +
+                                pubDate +
+                                '</p>' +
+                                '<p>' +
+                                description +
+                                '</p>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="card-footer">' +
+                            '<a href="' +
+                                link +
+                            '">Read more</a>' +
+                        '</div>' +
+                   '</div>';
+                });
+                newCardContent += '</div>' +
+                                '</div>' +
+                        '</div>';
+                mainView.router.loadContent(newCardContent);
+         });
+   });
+   $$(".ac-4").on('click', function(){
+        var url = 'http://miamioh.edu/news/listings/listing_top-stories.php';
+        $$.get(url, function (data) {
+                var xmlDoc = $.parseXML(data);
+                var $xml = $(xmlDoc);
+                var $item = $xml.find("item");
+                var newCardContent = '<div class="page" data-page="my-page">' +
+                            '<div class="page-content">' +
+                            '<div class="content-block-title">Top Stories</div>';
+                $item.each(function(){
+                        var title = $(this).find("title").text();
+                        var description = $(this).find("description").text();
+                        var pubDate = $(this).find("pubDate").text();
+                        var link = $(this).find("link").text();
+                        newCardContent +=
+                   '<div class="card">' +
+                        '<div  class="card-header">' +
+                                title +
+                        '</div>' +
+                        '<div class="card-content">' +
+                            '<div class="card-content-inner">' +
+                                '<p class="color-gray">' +
+                                pubDate +
+                                '</p>' +
+                                '<p>' +
+                                description +
+                                '</p>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="card-footer">' +
+                            '<a href="' +
+                                link +
+                            '">Read more</a>' +
+                        '</div>' +
+                   '</div>';
+                });
+                newCardContent += '</div>' +
+                                '</div>' +
+                        '</div>';
+                mainView.router.loadContent(newCardContent);
+         });
+   });
+<<<<<<< HEAD
+
+=======
+   
+>>>>>>> e1ec83d0f54d8e2c7d702aba315d29ee2b298760
 
    $$("#sub").on('click', function(){
-                console.log("I am clicked");
                 var input = $$('#na').val();
                 if(!input) {
                    myApp.alert('Please fill in the field');
                    return;
                 }
-                console.log(input);
 	   	var url = 'http://community.miamioh.edu/ph/search.php';
 		$$.get(url, {search:input}, function (data) {
 			var newPageContent = 
