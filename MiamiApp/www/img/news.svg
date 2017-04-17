@@ -15,22 +15,22 @@
    height="400"
    width="400"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="news2.svg">
+   sodipodi:docname="news.svg">
   <defs
      id="defs879" />
   <sodipodi:namedview
      inkscape:window-maximized="1"
      inkscape:window-y="1072"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-height="1017"
      inkscape:window-width="1920"
      units="px"
      showgrid="false"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="181.51297"
-     inkscape:cx="319.04143"
-     inkscape:zoom="2.011859"
+     inkscape:cy="363.31272"
+     inkscape:cx="197.21776"
+     inkscape:zoom="6.8214594"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -160,13 +160,13 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:21.16666603px;line-height:1.25;font-family:'Bembo Small Caps &amp; Oldstyle Fig';-inkscape-font-specification:'Bembo Small Caps &amp; Oldstyle Fig';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#c8102e;fill-opacity:1;stroke:none;stroke-width:0.26458332"
        x="53.088482"
-       y="204.81877"
+       y="205.40057"
        id="text1590"><tspan
          sodipodi:role="line"
          id="tspan1588"
          x="53.088482"
-         y="204.81877"
-         style="fill:#c8102e;fill-opacity:1;stroke-width:0.26458332">News</tspan></text>
+         y="205.40057"
+         style="font-size:16.93333244px;fill:#c8102e;fill-opacity:1;stroke-width:0.26458332">News</tspan></text>
     <ellipse
        style="opacity:1;fill:none;fill-opacity:1;stroke:#c8102e;stroke-width:0.90200001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path5268"
