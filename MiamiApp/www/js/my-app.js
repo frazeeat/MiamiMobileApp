@@ -40,8 +40,6 @@ $$('.notification-custom').on('click', function () {
 
 
 
-
-
 myApp.onPageInit('caslogin',function (page) {
 	/*    $$('.create-page').on('click', function () {
         createContentPage();
