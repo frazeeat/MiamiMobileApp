@@ -38,6 +38,7 @@ $$('.notification-custom').on('click', function () {
     });
 });
 
+
 var mySearchbar = myApp.searchbar('.searchbar', {
 		    searchList: '.list-block-search',
 			    searchIn: '.item-title'
