@@ -27,16 +27,16 @@
   <sodipodi:namedview
      inkscape:window-maximized="1"
      inkscape:window-y="1072"
-     inkscape:window-x="1912"
+     inkscape:window-x="-8"
      inkscape:window-height="1017"
      inkscape:window-width="1920"
      units="px"
      showgrid="false"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm"
-     inkscape:cy="179.08886"
+     inkscape:cy="400.28702"
      inkscape:cx="188.01839"
-     inkscape:zoom="1.28"
+     inkscape:zoom="4.34"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -51,7 +51,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -169,7 +169,8 @@
        y="204.81877"
        id="text1590"><tspan
          sodipodi:role="line"
-         id="tspan935">Dining</tspan></text>
+         id="tspan935"
+         style="font-size:16.93333333px">Dining</tspan></text>
     <ellipse
        style="opacity:1;fill:none;fill-opacity:1;stroke:#c8102e;stroke-width:0.90200001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path5268"

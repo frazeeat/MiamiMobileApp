@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <head> 
     <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data:">
 
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
@@ -52,7 +51,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="#" class="item-link">
+				<a href="dining.html" class="item-link">
 					<div class="item-content">
 						<div class="item-inner">
 							<div class="item-title">Dining</div>
@@ -66,7 +65,7 @@
 						</div>
 					</div>
 				</a>
-				<a href="#" class="item-link">
+				<a href="banner.html" class="item-link">
 					<div class="item-content">
 						<div class="item-inner">
 							<div class="item-title">Banner</div>
@@ -80,10 +79,17 @@
 						</div>
 					</div>
 				</a>
-				<a href="#" class="item-link">
+				<a href="caslogin.html" class="item-link">
 					<div class="item-content">
 						<div class="item-inner">
 							<div class="item-title">Login</div>
+						</div>
+					</div>
+				</a>
+				<a href="GET.html" class="item-link">
+					<div class="item-content">
+						<div class="item-inner">
+							<div class="item-title">Miami GET</div>
 						</div>
 					</div>
 				</a>
@@ -99,11 +105,11 @@
           <div class="navbar-inner">
             <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
             <div class="left">
-              <a href="about.html">About app</a>
+              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
             </div>
             <div class="center">Miami University</div>
             <div class="right">
-              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+	      <a href="caslogin.html" id="caslogin" class="link">Login</a>
             </div>
           </div>
         </div>
@@ -113,18 +119,16 @@
           <div data-page="index" class="page">
             <!-- Scrollable page content -->
             <div class="page-content">
-<<<<<<< HEAD
-              <div class="mainBox">
-                        <div class="subBox">
-                            <img id='mainIcons' src="./img/News.png" alt="news icon">
-                            <a href="./news.html">Local News</a>
-=======
+
+			<div class="content-block">
+			 </div>
+		
+
               <div class="row">
                         <div class="col-33">
-                           <a href="./local.html">
+                           <a href="./news.html">
 						   	<img id='mainIcons' src="./img/news.svg" alt="news icon">
 						   </a>
->>>>>>> fc1d880f48be53400ff4ef2bd9596b41672ffced
                         </div>
 						<div class="col-33">
 							<a href="./banner.html">
@@ -132,7 +136,7 @@
 							</a>
                         </div>
                         <div class="col-33">
-                           <a href="./testMiamiDirectory.html">
+                           <a href="./miamidirectory.html">
 						   		 <img id='mainIcons' src="./img/directory.svg" alt="md icon">
 						   </a>
                         </div>
@@ -144,7 +148,7 @@
 							</a>
                         </div>
                         <div class="col-33">
-							   	<a href="./map.html">
+			    <a href="./map.html">
 									<img id='mainIcons' src="./img/maps.svg" alt="map icon">
 								</a>
                         </div>
@@ -166,7 +170,7 @@
         <!--     <a href="https://muidp.miamioh.edu/cas/login"  class="link">CAS login</a> -->
         <!--    <a href="https://static.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg" target="_blank"  class="link">CAS login</a> -->
 
-	    <a href="caslogin.html" id="caslogin" class="link">CAS login </a> 
+	    <a href="about.html">About</a> 
 	    <a href="index.html" class="link">Home</a>
           </div>
         </div>
@@ -176,5 +180,6 @@
     <script type="text/javascript" src="./js/framework7.min.js"></script>
     <!-- Path to your app js-->
     <script type="text/javascript" src="./js/my-app.js"></script>
+	<script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
   </body>
 </html>

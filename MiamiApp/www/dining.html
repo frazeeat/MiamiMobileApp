@@ -14,19 +14,45 @@
 
   </div>
 <div class="pages">
-  <div data-page="map" class="page">
-    <div class="page-content">
-      <div class="content-block">
-
-<iframe
-  width="100%"
-  height="900"
-  frameborder="0" style="border:0" scrolling="yes"
-  src="http://miamioh.edu/hdrbs/dining/hours/index.html" allowfullscreen>
-</iframe>
-
-
-      </div>
+ <div data-page="home" class="page">
+  <!-- Search Bar -->
+  <form data-search-list=".list-block-search" data-search-in=".card-header" class="searchbar searchbar-init">
+    <div class="searchbar-input">
+      <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+    </div><a href="#" class="searchbar-cancel">Cancel</a>
+  </form>
+ 
+  <!-- Search Bar overlay -->
+  <div class="searchbar-overlay"></div>
+ 
+  <div class="page-content">
+    <!-- This block will be displayed if nothing found -->
+    <div class="content-block searchbar-not-found">
+      <div class="content-block-inner">Nothing found</div>
     </div>
+ 
+    <!-- This block will be displayed if anything found, and this list block is used a searbar target -->
+    <div class="cards-list list-block list-block-search searchbar-found">
+      <ul>
+     <li class="card">
+		<a href="subDin/armstrong.html" >
+		<div class="card-header">ArmStrong Student Center</div>
+		</a>
+		<div class="card-content">
+		<div class="card-content-inner"></div>
+		 </div>
+		<div class="card-footer">Card footer</div>
+		</li>
+		<li class="card">
+		<div class="card-header">Card Header</div>
+		<div class="card-content">
+		<div class="card-content-inner">Card content</div>
+		</div>
+		<div class="card-footer">Card footer</div>
+		</li> 
+      </ul>
+    </div>
+
   </div>
+</div> 
 </div>
