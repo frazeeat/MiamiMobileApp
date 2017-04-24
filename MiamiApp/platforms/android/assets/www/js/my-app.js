@@ -38,6 +38,7 @@ $$('.notification-custom').on('click', function () {
     });
 });
 
+
 var mySearchbar = myApp.searchbar('.searchbar', {
 		    searchList: '.list-block-search',
 			    searchIn: '.item-title'
@@ -68,16 +69,25 @@ $$(document).on('pageInit', function (page) {
      // var title = data.find("title");
      // console.log(title);
   // });
-    $$(".ac-1").on('click', function(){
+    $$(".newslink").on("click", function(){
+	var miamiurl = $(this).parent().parent().children(".card-content").children().children("#linkPath").text()
+	console.log(miamiurl);
+        window.open(miamiurl);
+    });
+    $$("#ac-1").once('click', function(e){
         var url = 'http://miamioh.edu/news/listings/arts-rss.php';
+	setTimeout(function(){
         $$.get(url, function (data) {
                 var xmlDoc = $.parseXML(data);
                 var $xml = $(xmlDoc);
                 var $item = $xml.find("item");
+		var index = 0;
                 var newCardContent = '<div class="page" data-page="my-page">' +
                             '<div class="page-content">' +
                             '<div class="content-block-title">Art News</div>';
                 $item.each(function(){
+			index++;
+			console.log(index);
                         var title = $(this).find("title").text();
                         var description = $(this).find("description").text();
                         var pubDate = $(this).find("pubDate").text();
@@ -95,23 +105,28 @@ $$(document).on('pageInit', function (page) {
                                 '<p>' +
                                 description +
                                 '</p>' +
+				'<p id = "linkPath" hidden>'+
+	                          link +
+        	                '</p>' +
+
                             '</div>' +
                         '</div>' +
                         '<div class="card-footer">' +
-                            '<a href="' +
-                                link +
-                            '">Read more</a>' +
+                            '<a href="#" ' +
+                            'class = "newslink">Read more</a>' +
                         '</div>' +
                    '</div>';
+		   if(index == 10){ return false;}
                 });
                 newCardContent += '</div>' +
                                 '</div>' +
                         '</div>';
                 mainView.router.loadContent(newCardContent);
          });
+	},2000);
    });
 
-   $$(".ac-2").on('click', function(){
+   $$("#ac-2").on('click', function(){
 	var url = 'http://miamioh.edu/news/listings/listing_campus-news.php';
         $$.get(url, function (data) {
 		var xmlDoc = $.parseXML(data);
@@ -138,12 +153,14 @@ $$(document).on('pageInit', function (page) {
                                 '<p>' +
                                 description +
                                 '</p>' +
+				'<p id = "linkPath" hidden>'+
+                                  link +
+                                '</p>' +
                             '</div>' +
                         '</div>' +
                         '<div class="card-footer">' +
-                            '<a href="' +
-				link + 
-			    '">Read more</a>' +
+                            '<a href="#"' +
+			    ' class = "newslink">Read more</a>' +
                         '</div>' +
                    '</div>';
 		});
@@ -153,7 +170,7 @@ $$(document).on('pageInit', function (page) {
 		mainView.router.loadContent(newCardContent);
          });
    });
-   $$(".ac-3").on('click', function(){
+   $$("#ac-3").on('click', function(){
         var url = 'http://miamioh.edu/news/listings/provost-rss.php';
         $$.get(url, function (data) {
                 var xmlDoc = $.parseXML(data);
@@ -180,12 +197,14 @@ $$(document).on('pageInit', function (page) {
                                 '<p>' +
                                 description +
                                 '</p>' +
+				'<p id = "linkPath" hidden>'+
+                                  link +
+                                '</p>' +
                             '</div>' +
                         '</div>' +
                         '<div class="card-footer">' +
-                            '<a href="' +
-                                link +
-                            '">Read more</a>' +
+                            '<a href="#"' +
+                            ' class="newslink">Read more</a>' +
                         '</div>' +
                    '</div>';
                 });
@@ -195,7 +214,7 @@ $$(document).on('pageInit', function (page) {
                 mainView.router.loadContent(newCardContent);
          });
    });
-   $$(".ac-4").on('click', function(){
+   $$("#ac-4").on('click', function(){
         var url = 'http://miamioh.edu/news/listings/listing_top-stories.php';
         $$.get(url, function (data) {
                 var xmlDoc = $.parseXML(data);
@@ -222,12 +241,13 @@ $$(document).on('pageInit', function (page) {
                                 '<p>' +
                                 description +
                                 '</p>' +
+				'<p id = "linkPath" hidden>'+
+                                  link +
+                                '</p>' +
                             '</div>' +
                         '</div>' +
                         '<div class="card-footer">' +
-                            '<a href="' +
-                                link +
-                            '">Read more</a>' +
+                            '<a href="#" class="newslink">Read more</a>' +
                         '</div>' +
                    '</div>';
                 });
