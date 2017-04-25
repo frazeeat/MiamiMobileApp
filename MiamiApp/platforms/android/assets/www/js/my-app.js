@@ -39,15 +39,6 @@ $$('.notification-custom').on('click', function () {
 });
 
 
-<<<<<<< HEAD
-=======
-var mySearchbar = myApp.searchbar('.searchbar', {
-		    searchList: '.list-block-search',
-			    searchIn: '.item-title'
-});  
->>>>>>> e79f5a2fdb5b17275a01c6fea43c074ac5432338
-
-
 
 myApp.onPageInit('caslogin',function (page) {
 	/*    $$('.create-page').on('click', function () {
@@ -129,7 +120,7 @@ $$(document).on('pageInit', function (page) {
 	},2000);
    });
 
-   $$("#ac-2").on('click', function(){
+   $$("#ac-2").once('click', function(){
 	var url = 'http://miamioh.edu/news/listings/listing_campus-news.php';
         $$.get(url, function (data) {
 		var xmlDoc = $.parseXML(data);
@@ -173,7 +164,7 @@ $$(document).on('pageInit', function (page) {
 		mainView.router.loadContent(newCardContent);
          });
    });
-   $$("#ac-3").on('click', function(){
+   $$("#ac-3").once('click', function(){
         var url = 'http://miamioh.edu/news/listings/provost-rss.php';
         $$.get(url, function (data) {
                 var xmlDoc = $.parseXML(data);
@@ -217,7 +208,7 @@ $$(document).on('pageInit', function (page) {
                 mainView.router.loadContent(newCardContent);
          });
    });
-   $$("#ac-4").on('click', function(){
+   $$("#ac-4").once('click', function(){
         var url = 'http://miamioh.edu/news/listings/listing_top-stories.php';
         $$.get(url, function (data) {
                 var xmlDoc = $.parseXML(data);
