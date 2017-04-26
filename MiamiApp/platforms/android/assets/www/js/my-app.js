@@ -19,7 +19,6 @@ myApp.onPageInit('about', function (page) {
 
 // Notificaiton.
 myApp.onPageInit('index',function(page){
-	console.log("what even?");
 
 });
 
@@ -38,8 +37,6 @@ $$('.notification-custom').on('click', function () {
     });
 });
 
-
-
 myApp.onPageInit('caslogin',function (page) {
 	/*    $$('.create-page').on('click', function () {
         createContentPage();
@@ -54,6 +51,7 @@ myApp.onPageInit('caslogin',function (page) {
         }, false);
 
      });
+var isAjaxing = false;
 $$(document).on('pageInit', function (page) {
   // Do something here for "about" page
   // var urlForNews = "http://miamioh.edu/news/listings/listing_campus-news.php"
@@ -65,13 +63,17 @@ $$(document).on('pageInit', function (page) {
   // });
     $$(".newslink").on("click", function(){
 	var miamiurl = $(this).parent().parent().children(".card-content").children().children("#linkPath").text()
-	console.log(miamiurl);
         window.open(miamiurl);
     });
     $$("#ac-1").once('click', function(e){
+	e.preventDefault();
         var url = 'http://miamioh.edu/news/listings/arts-rss.php';
-	setTimeout(function(){
+	if(isAjaxing){
+                    return;
+        }
+	isAjaxing = true;
         $$.get(url, function (data) {
+		isAjaxing = false;
                 var xmlDoc = $.parseXML(data);
                 var $xml = $(xmlDoc);
                 var $item = $xml.find("item");
@@ -81,7 +83,6 @@ $$(document).on('pageInit', function (page) {
                             '<div class="content-block-title">Art News</div>';
                 $item.each(function(){
 			index++;
-			console.log(index);
                         var title = $(this).find("title").text();
                         var description = $(this).find("description").text();
                         var pubDate = $(this).find("pubDate").text();
@@ -117,19 +118,21 @@ $$(document).on('pageInit', function (page) {
                         '</div>';
                 mainView.router.loadContent(newCardContent);
          });
-	},2000);
    });
 
    $$("#ac-2").once('click', function(){
 	var url = 'http://miamioh.edu/news/listings/listing_campus-news.php';
         $$.get(url, function (data) {
+		isAjaxing = false;
 		var xmlDoc = $.parseXML(data);
 		var $xml = $(xmlDoc);
 		var $item = $xml.find("item");
+		var index = 0;
 		var newCardContent = '<div class="page" data-page="my-page">' +
                             '<div class="page-content">' +
 			    '<div class="content-block-title">Campus News</div>';
 		$item.each(function(){
+			index++;
 			var title = $(this).find("title").text();
 			var description = $(this).find("description").text();
 			var pubDate = $(this).find("pubDate").text();
@@ -157,6 +160,7 @@ $$(document).on('pageInit', function (page) {
 			    ' class = "newslink">Read more</a>' +
                         '</div>' +
                    '</div>';
+		   if(index == 10){ return false;}
 		});
 		newCardContent += '</div>' + 
 				'</div>' +
@@ -167,13 +171,16 @@ $$(document).on('pageInit', function (page) {
    $$("#ac-3").once('click', function(){
         var url = 'http://miamioh.edu/news/listings/provost-rss.php';
         $$.get(url, function (data) {
+		isAjaxing = false;
                 var xmlDoc = $.parseXML(data);
                 var $xml = $(xmlDoc);
                 var $item = $xml.find("item");
+		var index = 0;
                 var newCardContent = '<div class="page" data-page="my-page">' +
                             '<div class="page-content">' +
                             '<div class="content-block-title">Provost News</div>';
                 $item.each(function(){
+			index++;
                         var title = $(this).find("title").text();
                         var description = $(this).find("description").text();
                         var pubDate = $(this).find("pubDate").text();
@@ -201,6 +208,7 @@ $$(document).on('pageInit', function (page) {
                             ' class="newslink">Read more</a>' +
                         '</div>' +
                    '</div>';
+		   if(index == 10){ return false;}
                 });
                 newCardContent += '</div>' +
                                 '</div>' +
@@ -208,16 +216,20 @@ $$(document).on('pageInit', function (page) {
                 mainView.router.loadContent(newCardContent);
          });
    });
+
    $$("#ac-4").once('click', function(){
         var url = 'http://miamioh.edu/news/listings/listing_top-stories.php';
         $$.get(url, function (data) {
+		isAjaxing = false;
                 var xmlDoc = $.parseXML(data);
                 var $xml = $(xmlDoc);
                 var $item = $xml.find("item");
+		var index = 0;
                 var newCardContent = '<div class="page" data-page="my-page">' +
                             '<div class="page-content">' +
                             '<div class="content-block-title">Top Stories</div>';
                 $item.each(function(){
+			index++;
                         var title = $(this).find("title").text();
                         var description = $(this).find("description").text();
                         var pubDate = $(this).find("pubDate").text();
@@ -244,6 +256,7 @@ $$(document).on('pageInit', function (page) {
                             '<a href="#" class="newslink">Read more</a>' +
                         '</div>' +
                    '</div>';
+		   if(index == 10){ return false;}
                 });
                 newCardContent += '</div>' +
                                 '</div>' +
