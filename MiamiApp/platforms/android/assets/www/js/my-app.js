@@ -37,6 +37,8 @@ $$('.notification-custom').on('click', function () {
     });
 });
 
+
+
 myApp.onPageInit('caslogin',function (page) {
 	/*    $$('.create-page').on('click', function () {
         createContentPage();
@@ -120,7 +122,9 @@ $$(document).on('pageInit', function (page) {
          });
    });
 
-   $$("#ac-2").once('click', function(){
+   $$("#ac-2").once('click', function(e){
+	if(isAjaxing){return;}
+	isAjaxing = true;
 	var url = 'http://miamioh.edu/news/listings/listing_campus-news.php';
         $$.get(url, function (data) {
 		isAjaxing = false;
@@ -168,7 +172,9 @@ $$(document).on('pageInit', function (page) {
 		mainView.router.loadContent(newCardContent);
          });
    });
-   $$("#ac-3").once('click', function(){
+   $$("#ac-3").once('click', function(e){
+	if(isAjaxing){return;}
+	isAjaxing = true;
         var url = 'http://miamioh.edu/news/listings/provost-rss.php';
         $$.get(url, function (data) {
 		isAjaxing = false;
@@ -216,8 +222,10 @@ $$(document).on('pageInit', function (page) {
                 mainView.router.loadContent(newCardContent);
          });
    });
-
-   $$("#ac-4").once('click', function(){
+   $$("#ac-4").once('click', function(e){
+	if(isAjaxing){return;}
+	isAjaxing = true;
+	e.preventDefault();
         var url = 'http://miamioh.edu/news/listings/listing_top-stories.php';
         $$.get(url, function (data) {
 		isAjaxing = false;
