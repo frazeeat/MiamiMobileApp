@@ -37,7 +37,25 @@ $$('.notification-custom').on('click', function () {
     });
 });
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+var mySearchbar = myApp.searchbar('.searchbar', {
+		    searchList: '.list-block-search',
+			    searchIn: '.item-title'
+});  
+>>>>>>> e79f5a2fdb5b17275a01c6fea43c074ac5432338
+
+>>>>>>> 7ab73880c691bfd5209859078edf38faedf5f62b
+>>>>>>> a74dfa8635a1f4f4226a49bafab1cfc642769033
+
+>>>>>>> 3ad11561daca4fd30f64d9d21fbe572b8fd0eb6c
 
 myApp.onPageInit('caslogin',function (page) {
 	/*    $$('.create-page').on('click', function () {

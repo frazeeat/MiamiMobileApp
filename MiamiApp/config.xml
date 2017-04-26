@@ -18,10 +18,18 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <platform name="android">
-        <allow-intent href="market:*" />
+			<allow-intent href="market:*" />
+			<icon src="./www/img/mdpi.png" density="mdpi" />
+			<icon src="./www/img/hdpi.png" density="hdpi" />
+			<icon src="./www/img/xhdpi.png" density="xhdpi" />
+			<icon src="./www/img/xxhdpi.png" density="xxhdpi" />
     </platform>
     <platform name="ios">
-        <allow-intent href="itms:*" />
+		<icon src="./www/img/mdpi.png" density="mdpi" />
+		<icon src="./www/img/hdpi.png" density="hdpi" />
+		<icon src="./www/img/xhdpi.png" density="xhdpi" />
+		<icon src="./www/img/xxhdpi.png" density="xxhdpi" />	
+		<allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
 	</platform>
 
