@@ -39,15 +39,6 @@ $$('.notification-custom').on('click', function () {
 });
 
 
-<<<<<<< HEAD
-=======
-var mySearchbar = myApp.searchbar('.searchbar', {
-		    searchList: '.list-block-search',
-			    searchIn: '.item-title'
-});  
->>>>>>> e79f5a2fdb5b17275a01c6fea43c074ac5432338
-
-
 
 myApp.onPageInit('caslogin',function (page) {
 	/*    $$('.create-page').on('click', function () {
