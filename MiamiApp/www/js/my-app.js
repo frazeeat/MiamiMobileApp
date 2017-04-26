@@ -337,3 +337,12 @@ function getDate(){
 	var dt = Date();
 	ele.innerHTML = dt;
 }
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+	function navigateTo(){
+		launchnavigator.navigate("London, UK")
+	}
+}
+
