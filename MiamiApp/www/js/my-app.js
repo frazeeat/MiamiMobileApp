@@ -3,7 +3,6 @@ var myApp = new Framework7();
 
 // Export selectors engine
 var $$ = Dom7;
-
 // Add view
 var mainView = myApp.addView('.view-main', {
     // Because we use fixed-through navbar we can enable dynamic navbar
@@ -18,17 +17,269 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
+// Notificaiton.
+myApp.onPageInit('index',function(page){
 
+});
+
+$$('.notification-custom').on('click', function () {
+    myApp.addNotification({
+        message: 'Not logged in yet?',
+        button: {
+            text: 'Click me',
+            color: 'yellow',
+	    close: true
+        }
+/*,	onClose: function(){
+		myApp.alert('woo!');
+	}
+*/
+    });
+});
+
+
+
+myApp.onPageInit('caslogin',function (page) {
+	/*    $$('.create-page').on('click', function () {
+        createContentPage();
+    });
+*/
+	console.log("reached caslogin.");
+
+        window.addEventListener("message",
+        function(e){
+                if(e.origin !== 'https://muidp.miamioh.edu/cas/login') {return;}
+                alert("**session**"+e.data);
+        }, false);
+
+     });
+var isAjaxing = false;
 $$(document).on('pageInit', function (page) {
   // Do something here for "about" page
+  // var urlForNews = "http://miamioh.edu/news/listings/listing_campus-news.php"
+  // $$.get(urlForNews, function(data){
+     // console.log("Getting Data Successfully...");
+     // var xmlValue = $j.xml(data)
+     // var title = data.find("title");
+     // console.log(title);
+  // });
+    $$(".newslink").on("click", function(){
+	var miamiurl = $(this).parent().parent().children(".card-content").children().children("#linkPath").text()
+        window.open(miamiurl);
+    });
+    $$("#ac-1").once('click', function(e){
+	e.preventDefault();
+        var url = 'http://miamioh.edu/news/listings/arts-rss.php';
+	if(isAjaxing){
+                    return;
+        }
+	isAjaxing = true;
+        $$.get(url, function (data) {
+		isAjaxing = false;
+                var xmlDoc = $.parseXML(data);
+                var $xml = $(xmlDoc);
+                var $item = $xml.find("item");
+		var index = 0;
+                var newCardContent = '<div class="page" data-page="my-page">' +
+                            '<div class="page-content">' +
+                            '<div class="content-block-title">Art News</div>';
+                $item.each(function(){
+			index++;
+                        var title = $(this).find("title").text();
+                        var description = $(this).find("description").text();
+                        var pubDate = $(this).find("pubDate").text();
+                        var link = $(this).find("link").text();
+                        newCardContent +=
+                   '<div class="card">' +
+                        '<div  class="card-header">' +
+                                title +
+                        '</div>' +
+                        '<div class="card-content">' +
+                            '<div class="card-content-inner">' +
+                                '<p class="color-gray">' +
+                                pubDate +
+                                '</p>' +
+                                '<p>' +
+                                description +
+                                '</p>' +
+				'<p id = "linkPath" hidden>'+
+	                          link +
+        	                '</p>' +
+
+                            '</div>' +
+                        '</div>' +
+                        '<div class="card-footer">' +
+                            '<a href="#" ' +
+                            'class = "newslink">Read more</a>' +
+                        '</div>' +
+                   '</div>';
+		   if(index == 10){ return false;}
+                });
+                newCardContent += '</div>' +
+                                '</div>' +
+                        '</div>';
+                mainView.router.loadContent(newCardContent);
+         });
+   });
+
+   $$("#ac-2").once('click', function(e){
+	if(isAjaxing){return;}
+	isAjaxing = true;
+	var url = 'http://miamioh.edu/news/listings/listing_campus-news.php';
+        $$.get(url, function (data) {
+		isAjaxing = false;
+		var xmlDoc = $.parseXML(data);
+		var $xml = $(xmlDoc);
+		var $item = $xml.find("item");
+		var index = 0;
+		var newCardContent = '<div class="page" data-page="my-page">' +
+                            '<div class="page-content">' +
+			    '<div class="content-block-title">Campus News</div>';
+		$item.each(function(){
+			index++;
+			var title = $(this).find("title").text();
+			var description = $(this).find("description").text();
+			var pubDate = $(this).find("pubDate").text();
+			var link = $(this).find("link").text();
+			newCardContent +=
+                   '<div class="card">' +
+                        '<div  class="card-header">' +
+                                title +
+                        '</div>' +
+                        '<div class="card-content">' +
+                            '<div class="card-content-inner">' +
+                                '<p class="color-gray">' +
+                                pubDate +
+                                '</p>' +
+                                '<p>' +
+                                description +
+                                '</p>' +
+				'<p id = "linkPath" hidden>'+
+                                  link +
+                                '</p>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="card-footer">' +
+                            '<a href="#"' +
+			    ' class = "newslink">Read more</a>' +
+                        '</div>' +
+                   '</div>';
+		   if(index == 10){ return false;}
+		});
+		newCardContent += '</div>' + 
+				'</div>' +
+                        '</div>'; 
+		mainView.router.loadContent(newCardContent);
+         });
+   });
+   $$("#ac-3").once('click', function(e){
+	if(isAjaxing){return;}
+	isAjaxing = true;
+        var url = 'http://miamioh.edu/news/listings/provost-rss.php';
+        $$.get(url, function (data) {
+		isAjaxing = false;
+                var xmlDoc = $.parseXML(data);
+                var $xml = $(xmlDoc);
+                var $item = $xml.find("item");
+		var index = 0;
+                var newCardContent = '<div class="page" data-page="my-page">' +
+                            '<div class="page-content">' +
+                            '<div class="content-block-title">Provost News</div>';
+                $item.each(function(){
+			index++;
+                        var title = $(this).find("title").text();
+                        var description = $(this).find("description").text();
+                        var pubDate = $(this).find("pubDate").text();
+                        var link = $(this).find("link").text();
+                        newCardContent +=
+                   '<div class="card">' +
+                        '<div  class="card-header">' +
+                                title +
+                        '</div>' +
+                        '<div class="card-content">' +
+                            '<div class="card-content-inner">' +
+                                '<p class="color-gray">' +
+                                pubDate +
+                                '</p>' +
+                                '<p>' +
+                                description +
+                                '</p>' +
+				'<p id = "linkPath" hidden>'+
+                                  link +
+                                '</p>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="card-footer">' +
+                            '<a href="#"' +
+                            ' class="newslink">Read more</a>' +
+                        '</div>' +
+                   '</div>';
+		   if(index == 10){ return false;}
+                });
+                newCardContent += '</div>' +
+                                '</div>' +
+                        '</div>';
+                mainView.router.loadContent(newCardContent);
+         });
+   });
+   $$("#ac-4").once('click', function(e){
+	if(isAjaxing){return;}
+	isAjaxing = true;
+	e.preventDefault();
+        var url = 'http://miamioh.edu/news/listings/listing_top-stories.php';
+        $$.get(url, function (data) {
+		isAjaxing = false;
+                var xmlDoc = $.parseXML(data);
+                var $xml = $(xmlDoc);
+                var $item = $xml.find("item");
+		var index = 0;
+                var newCardContent = '<div class="page" data-page="my-page">' +
+                            '<div class="page-content">' +
+                            '<div class="content-block-title">Top Stories</div>';
+                $item.each(function(){
+			index++;
+                        var title = $(this).find("title").text();
+                        var description = $(this).find("description").text();
+                        var pubDate = $(this).find("pubDate").text();
+                        var link = $(this).find("link").text();
+                        newCardContent +=
+                   '<div class="card">' +
+                        '<div  class="card-header">' +
+                                title +
+                        '</div>' +
+                        '<div class="card-content">' +
+                            '<div class="card-content-inner">' +
+                                '<p class="color-gray">' +
+                                pubDate +
+                                '</p>' +
+                                '<p>' +
+                                description +
+                                '</p>' +
+				'<p id = "linkPath" hidden>'+
+                                  link +
+                                '</p>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="card-footer">' +
+                            '<a href="#" class="newslink">Read more</a>' +
+                        '</div>' +
+                   '</div>';
+		   if(index == 10){ return false;}
+                });
+                newCardContent += '</div>' +
+                                '</div>' +
+                        '</div>';
+                mainView.router.loadContent(newCardContent);
+         });
+   });
+
+
    $$("#sub").on('click', function(){
-                console.log("I am clicked");
                 var input = $$('#na').val();
                 if(!input) {
                    myApp.alert('Please fill in the field');
                    return;
                 }
-                console.log(input);
 	   	var url = 'http://community.miamioh.edu/ph/search.php';
 		$$.get(url, {search:input}, function (data) {
 			var newPageContent = 
@@ -57,69 +308,21 @@ $$(document).on('pageInit', function (page) {
  	   return;
  	}
  
-    })
+    });
 
-
-//	$$('#Load').load('https://muidp.miamioh.edu/cas/login');
-
-/*        $$.ajax({
-                dataType:'html',
-                url: 'https://muidp.miamioh.edu/cas/login',
-                success: function(data) {
-                        $('#ajax').html($(data).children());
-                },
-                error: function(err) {
-                        console.log("ERROR");
-                        console.log(err);
-
+   $$("#search").on('click', function(){
+                console.log("search button clicked");
+                var input = $$('#searchTerms').val();
+                if(!input) {
+                   myApp.alert('Please enter at least one term');
+                   return;
                 }
-        });
-*/
+                console.log(input);
+   
+   });
 
 });
-/*
-$$(document).on('pageInit',function(e){
-	var page = e.detail.page;
-	if(page.name === 'map') {
- var mu = {lat: 39.5105, lng: -84.7309};
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
-            center: mu
-          });
-var marker = new google.maps.Marker({
-            position: mu,
-            map: map
-          });
 
-	}
-})
-*/
-
-
-
-/*
-myApp.onPageInit('map',function(page) {
-//<script>
-        function initMap(){
-          var mu = {lat: 39.5105, lng: -84.7309};
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15,
-            center: mu
-          });
-          var marker = new google.maps.Marker({
-            position: mu,
-            map: map
-          });
-        }
-//</script>
-//<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIawavjxzyp3aI4ZEsNeJA4HcFfLwIoyM&callback=initMap">
-//</script>
-
-
-
-});
-*/
 
 // Generate dynamic page
 var dynamicPageIndex = 0;
@@ -148,5 +351,19 @@ function createContentPage() {
         '</div>'
     );
 	return;
+}
+
+function getDate(){
+	var ele = document.getElementById('display');
+	var dt = Date();
+	ele.innerHTML = dt;
+}
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+	function navigateTo(){
+		launchnavigator.navigate("London, UK")
+	}
 }
 

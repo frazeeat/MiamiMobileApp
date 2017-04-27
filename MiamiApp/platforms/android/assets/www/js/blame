@@ -1,0 +1,348 @@
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000   1) // Initialize your app
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000   2) var myApp = new Framework7();
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000   3) 
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000   4) // Export selectors engine
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000   5) var $$ = Dom7;
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000   6) // Add view
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000   7) var mainView = myApp.addView('.view-main', {
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000   8)     // Because we use fixed-through navbar we can enable dynamic navbar
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000   9)     dynamicNavbar: true
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000  10) });
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000  11) 
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000  12) // Callbacks to run specific code for specific pages, for example for About page:
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000  13) myApp.onPageInit('about', function (page) {
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000  14)     // run createContentPage func after link was clicked
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000  15)     $$('.create-page').on('click', function () {
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000  16)         createContentPage();
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000  17)     });
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  18) });
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  19) 
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  20) // Notificaiton.
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  21) myApp.onPageInit('index',function(page){
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  22) 	console.log("what even?");
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  23) 
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  24) });
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  25) 
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  26) $$('.notification-custom').on('click', function () {
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  27)     myApp.addNotification({
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  28)         message: 'Not logged in yet?',
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  29)         button: {
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  30)             text: 'Click me',
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  31)             color: 'yellow',
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  32) 	    close: true
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  33)         }
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  34) /*,	onClose: function(){
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  35) 		myApp.alert('woo!');
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  36) 	}
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  37) */
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  38)     });
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  39) });
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  40) 
+1c03cb74 (frazeeat          2017-04-24 22:05:06 +0000  41) 
+00000000 (Not Committed Yet 2017-04-24 22:49:58 +0000  42) <<<<<<< HEAD
+00000000 (Not Committed Yet 2017-04-24 22:49:58 +0000  43) =======
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  44) var mySearchbar = myApp.searchbar('.searchbar', {
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  45) 		    searchList: '.list-block-search',
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  46) 			    searchIn: '.item-title'
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  47) });  
+00000000 (Not Committed Yet 2017-04-24 22:49:58 +0000  48) >>>>>>> e79f5a2fdb5b17275a01c6fea43c074ac5432338
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  49) 
+b37ffdda (rougehero         2017-04-17 23:32:08 +0000  50) 
+8695e87f (SamHausfeld       2017-03-27 22:43:16 +0000  51) 
+f2f12257 (SamHausfeld       2017-03-27 22:22:15 +0000  52) myApp.onPageInit('caslogin',function (page) {
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000  53) 	/*    $$('.create-page').on('click', function () {
+f2f12257 (SamHausfeld       2017-03-27 22:22:15 +0000  54)         createContentPage();
+f2f12257 (SamHausfeld       2017-03-27 22:22:15 +0000  55)     });
+f2f12257 (SamHausfeld       2017-03-27 22:22:15 +0000  56) */
+f2f12257 (SamHausfeld       2017-03-27 22:22:15 +0000  57) 	console.log("reached caslogin.");
+f2f12257 (SamHausfeld       2017-03-27 22:22:15 +0000  58) 
+f2f12257 (SamHausfeld       2017-03-27 22:22:15 +0000  59)         window.addEventListener("message",
+f2f12257 (SamHausfeld       2017-03-27 22:22:15 +0000  60)         function(e){
+f2f12257 (SamHausfeld       2017-03-27 22:22:15 +0000  61)                 if(e.origin !== 'https://muidp.miamioh.edu/cas/login') {return;}
+f2f12257 (SamHausfeld       2017-03-27 22:22:15 +0000  62)                 alert("**session**"+e.data);
+f2f12257 (SamHausfeld       2017-03-27 22:22:15 +0000  63)         }, false);
+f2f12257 (SamHausfeld       2017-03-27 22:22:15 +0000  64) 
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  65)      });
+77c57d6f (wangjian96        2017-02-10 16:36:24 +0000  66) $$(document).on('pageInit', function (page) {
+2bc93079 (wangjian96        2017-01-24 23:59:33 +0000  67)   // Do something here for "about" page
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000  68)   // var urlForNews = "http://miamioh.edu/news/listings/listing_campus-news.php"
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000  69)   // $$.get(urlForNews, function(data){
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000  70)      // console.log("Getting Data Successfully...");
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000  71)      // var xmlValue = $j.xml(data)
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000  72)      // var title = data.find("title");
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000  73)      // console.log(title);
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000  74)   // });
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000  75)     $$(".newslink").on("click", function(){
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000  76) 	var miamiurl = $(this).parent().parent().children(".card-content").children().children("#linkPath").text()
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000  77) 	console.log(miamiurl);
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000  78)         window.open(miamiurl);
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000  79)     });
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000  80)     $$("#ac-1").once('click', function(e){
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  81)         var url = 'http://miamioh.edu/news/listings/arts-rss.php';
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000  82) 	setTimeout(function(){
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000  83)         $$.get(url, function (data) {
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  84)                 var xmlDoc = $.parseXML(data);
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  85)                 var $xml = $(xmlDoc);
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  86)                 var $item = $xml.find("item");
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000  87) 		var index = 0;
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  88)                 var newCardContent = '<div class="page" data-page="my-page">' +
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000  89)                             '<div class="page-content">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  90)                             '<div class="content-block-title">Art News</div>';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  91)                 $item.each(function(){
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000  92) 			index++;
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000  93) 			console.log(index);
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  94)                         var title = $(this).find("title").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  95)                         var description = $(this).find("description").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  96)                         var pubDate = $(this).find("pubDate").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  97)                         var link = $(this).find("link").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  98)                         newCardContent +=
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000  99)                    '<div class="card">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 100)                         '<div  class="card-header">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 101)                                 title +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 102)                         '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 103)                         '<div class="card-content">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 104)                             '<div class="card-content-inner">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 105)                                 '<p class="color-gray">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 106)                                 pubDate +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 107)                                 '</p>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 108)                                 '<p>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 109)                                 description +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 110)                                 '</p>' +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 111) 				'<p id = "linkPath" hidden>'+
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 112) 	                          link +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 113)         	                '</p>' +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 114) 
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000 115)                             '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 116)                         '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 117)                         '<div class="card-footer">' +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 118)                             '<a href="#" ' +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 119)                             'class = "newslink">Read more</a>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 120)                         '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 121)                    '</div>';
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 122) 		   if(index == 10){ return false;}
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 123)                 });
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 124)                 newCardContent += '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 125)                                 '</div>' +
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000 126)                         '</div>';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 127)                 mainView.router.loadContent(newCardContent);
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 128)          });
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 129) 	},2000);
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 130)    });
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 131) 
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 132)    $$("#ac-2").once('click', function(){
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 133) 	var url = 'http://miamioh.edu/news/listings/listing_campus-news.php';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 134)         $$.get(url, function (data) {
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 135) 		var xmlDoc = $.parseXML(data);
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 136) 		var $xml = $(xmlDoc);
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 137) 		var $item = $xml.find("item");
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 138) 		var newCardContent = '<div class="page" data-page="my-page">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 139)                             '<div class="page-content">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 140) 			    '<div class="content-block-title">Campus News</div>';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 141) 		$item.each(function(){
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 142) 			var title = $(this).find("title").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 143) 			var description = $(this).find("description").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 144) 			var pubDate = $(this).find("pubDate").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 145) 			var link = $(this).find("link").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 146) 			newCardContent +=
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 147)                    '<div class="card">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 148)                         '<div  class="card-header">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 149)                                 title +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 150)                         '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 151)                         '<div class="card-content">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 152)                             '<div class="card-content-inner">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 153)                                 '<p class="color-gray">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 154)                                 pubDate +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 155)                                 '</p>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 156)                                 '<p>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 157)                                 description +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 158)                                 '</p>' +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 159) 				'<p id = "linkPath" hidden>'+
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 160)                                   link +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 161)                                 '</p>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 162)                             '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 163)                         '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 164)                         '<div class="card-footer">' +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 165)                             '<a href="#"' +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 166) 			    ' class = "newslink">Read more</a>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 167)                         '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 168)                    '</div>';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 169) 		});
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 170) 		newCardContent += '</div>' + 
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 171) 				'</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 172)                         '</div>'; 
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 173) 		mainView.router.loadContent(newCardContent);
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000 174)          });
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000 175)    });
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 176)    $$("#ac-3").once('click', function(){
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 177)         var url = 'http://miamioh.edu/news/listings/provost-rss.php';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 178)         $$.get(url, function (data) {
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 179)                 var xmlDoc = $.parseXML(data);
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 180)                 var $xml = $(xmlDoc);
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 181)                 var $item = $xml.find("item");
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 182)                 var newCardContent = '<div class="page" data-page="my-page">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 183)                             '<div class="page-content">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 184)                             '<div class="content-block-title">Provost News</div>';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 185)                 $item.each(function(){
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 186)                         var title = $(this).find("title").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 187)                         var description = $(this).find("description").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 188)                         var pubDate = $(this).find("pubDate").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 189)                         var link = $(this).find("link").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 190)                         newCardContent +=
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 191)                    '<div class="card">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 192)                         '<div  class="card-header">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 193)                                 title +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 194)                         '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 195)                         '<div class="card-content">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 196)                             '<div class="card-content-inner">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 197)                                 '<p class="color-gray">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 198)                                 pubDate +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 199)                                 '</p>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 200)                                 '<p>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 201)                                 description +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 202)                                 '</p>' +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 203) 				'<p id = "linkPath" hidden>'+
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 204)                                   link +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 205)                                 '</p>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 206)                             '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 207)                         '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 208)                         '<div class="card-footer">' +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 209)                             '<a href="#"' +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 210)                             ' class="newslink">Read more</a>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 211)                         '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 212)                    '</div>';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 213)                 });
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 214)                 newCardContent += '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 215)                                 '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 216)                         '</div>';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 217)                 mainView.router.loadContent(newCardContent);
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 218)          });
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 219)    });
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 220)    $$("#ac-4").once('click', function(){
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 221)         var url = 'http://miamioh.edu/news/listings/listing_top-stories.php';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 222)         $$.get(url, function (data) {
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 223)                 var xmlDoc = $.parseXML(data);
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 224)                 var $xml = $(xmlDoc);
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 225)                 var $item = $xml.find("item");
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 226)                 var newCardContent = '<div class="page" data-page="my-page">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 227)                             '<div class="page-content">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 228)                             '<div class="content-block-title">Top Stories</div>';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 229)                 $item.each(function(){
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 230)                         var title = $(this).find("title").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 231)                         var description = $(this).find("description").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 232)                         var pubDate = $(this).find("pubDate").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 233)                         var link = $(this).find("link").text();
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 234)                         newCardContent +=
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 235)                    '<div class="card">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 236)                         '<div  class="card-header">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 237)                                 title +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 238)                         '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 239)                         '<div class="card-content">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 240)                             '<div class="card-content-inner">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 241)                                 '<p class="color-gray">' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 242)                                 pubDate +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 243)                                 '</p>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 244)                                 '<p>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 245)                                 description +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 246)                                 '</p>' +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 247) 				'<p id = "linkPath" hidden>'+
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 248)                                   link +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 249)                                 '</p>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 250)                             '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 251)                         '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 252)                         '<div class="card-footer">' +
+2da8b397 (wangjian96        2017-04-20 15:51:08 +0000 253)                             '<a href="#" class="newslink">Read more</a>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 254)                         '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 255)                    '</div>';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 256)                 });
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 257)                 newCardContent += '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 258)                                 '</div>' +
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 259)                         '</div>';
+bb26a783 (wangjian96        2017-04-17 22:03:09 +0000 260)                 mainView.router.loadContent(newCardContent);
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000 261)          });
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000 262)    });
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000 263) 
+706a1630 (SamHausfeld       2017-04-17 22:22:37 +0000 264) 
+77c57d6f (wangjian96        2017-02-10 16:36:24 +0000 265)    $$("#sub").on('click', function(){
+77c57d6f (wangjian96        2017-02-10 16:36:24 +0000 266)                 var input = $$('#na').val();
+77c57d6f (wangjian96        2017-02-10 16:36:24 +0000 267)                 if(!input) {
+77c57d6f (wangjian96        2017-02-10 16:36:24 +0000 268)                    myApp.alert('Please fill in the field');
+77c57d6f (wangjian96        2017-02-10 16:36:24 +0000 269)                    return;
+77c57d6f (wangjian96        2017-02-10 16:36:24 +0000 270)                 }
+9b0df5a6 (wangjian96        2017-03-06 23:39:43 +0000 271) 	   	var url = 'http://community.miamioh.edu/ph/search.php';
+9b0df5a6 (wangjian96        2017-03-06 23:39:43 +0000 272) 		$$.get(url, {search:input}, function (data) {
+9b0df5a6 (wangjian96        2017-03-06 23:39:43 +0000 273) 			var newPageContent = 
+9b0df5a6 (wangjian96        2017-03-06 23:39:43 +0000 274) 			'<div class="page" data-page="my-page">' +
+9b0df5a6 (wangjian96        2017-03-06 23:39:43 +0000 275)                             '<div class="page-content">' +
+9b0df5a6 (wangjian96        2017-03-06 23:39:43 +0000 276) 			   	 data +
+9b0df5a6 (wangjian96        2017-03-06 23:39:43 +0000 277)                             '</div>' +
+9b0df5a6 (wangjian96        2017-03-06 23:39:43 +0000 278)                         '</div>';
+9b0df5a6 (wangjian96        2017-03-06 23:39:43 +0000 279)                         mainView.router.loadContent(newPageContent);
+9b0df5a6 (wangjian96        2017-03-06 23:39:43 +0000 280) 		});
+77c57d6f (wangjian96        2017-02-10 16:36:24 +0000 281)    });
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 282)    $$("#signIn").on('click', function(){
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 283)  	var username = $$("#usr").val();
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 284)         var password = $$("#pwd").val();
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 285)  	if(!password && !username){
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 286)             myApp.alert('Please fill in the username and password','Miami App');
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 287)             return;
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 288)          }else if(!username){
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 289) 	   myApp.alert('Please fill in the username','Miami App');
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 290)  	   return;
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 291)          }else if(!password){
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 292) 	   myApp.alert('Please fill in the password','Miami App');
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 293)  	   return;
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 294)  	}else{
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 295) 	   myApp.alert('succeed','Miami App');
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 296)  	   return;
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 297)  	}
+01a16a9d (wangjian96        2017-03-06 22:43:54 +0000 298)  
+5459bd4b (wangjian96        2017-04-10 22:29:50 +0000 299)     });
+8be6c160 (SamHausfeld       2017-03-06 23:20:05 +0000 300) 
+16cc4ea6 (rougehero         2017-04-10 22:21:08 +0000 301)    $$("#search").on('click', function(){
+16cc4ea6 (rougehero         2017-04-10 22:21:08 +0000 302)                 console.log("search button clicked");
+16cc4ea6 (rougehero         2017-04-10 22:21:08 +0000 303)                 var input = $$('#searchTerms').val();
+16cc4ea6 (rougehero         2017-04-10 22:21:08 +0000 304)                 if(!input) {
+16cc4ea6 (rougehero         2017-04-10 22:21:08 +0000 305)                    myApp.alert('Please enter at least one term');
+16cc4ea6 (rougehero         2017-04-10 22:21:08 +0000 306)                    return;
+8be6c160 (SamHausfeld       2017-03-06 23:20:05 +0000 307)                 }
+16cc4ea6 (rougehero         2017-04-10 22:21:08 +0000 308)                 console.log(input);
+16cc4ea6 (rougehero         2017-04-10 22:21:08 +0000 309)    
+16cc4ea6 (rougehero         2017-04-10 22:21:08 +0000 310)    });
+8be6c160 (SamHausfeld       2017-03-06 23:20:05 +0000 311) 
+2bc93079 (wangjian96        2017-01-24 23:59:33 +0000 312) });
+0c3ec14a (SamHausfeld       2017-01-24 15:58:14 +0000 313) 
+0c3ec14a (SamHausfeld       2017-01-24 15:58:14 +0000 314) 
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 315) // Generate dynamic page
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 316) var dynamicPageIndex = 0;
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 317) function createContentPage() {
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 318) 	mainView.router.loadContent(
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 319)         '<!-- Top Navbar-->' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 320)         '<div class="navbar">' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 321)         '  <div class="navbar-inner">' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 322)         '    <div class="left"><a href="#" class="back link"><i class="icon icon-back"></i><span>Back</span></a></div>' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 323)         '    <div class="center sliding">Dynamic Page ' + (++dynamicPageIndex) + '</div>' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 324)         '  </div>' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 325)         '</div>' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 326)         '<div class="pages">' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 327)         '  <!-- Page, data-page contains page name-->' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 328)         '  <div data-page="dynamic-pages" class="page">' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 329)         '    <!-- Scrollable page content-->' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 330)         '    <div class="page-content">' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 331)         '      <div class="content-block">' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 332)         '        <div class="content-block-inner">' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 333)         '          <p>Here is a dynamic page created on ' + new Date() + ' !</p>' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 334)         '          <p>Go <a href="#" class="back">back</a> or go to <a href="services.html">Services</a>.</p>' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 335)         '        </div>' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 336)         '      </div>' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 337)         '    </div>' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 338)         '  </div>' +
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 339)         '</div>'
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 340)     );
+5cb47ccb (wangjian96        2016-11-18 01:23:46 +0000 341) 	return;
+2bc93079 (wangjian96        2017-01-24 23:59:33 +0000 342) }
+77c57d6f (wangjian96        2017-02-10 16:36:24 +0000 343) 
+d7439c02 (frazeeat          2017-04-10 22:26:15 +0000 344) function getDate(){
+d7439c02 (frazeeat          2017-04-10 22:26:15 +0000 345) 	var ele = document.getElementById('display');
+d7439c02 (frazeeat          2017-04-10 22:26:15 +0000 346) 	var dt = Date();
+d7439c02 (frazeeat          2017-04-10 22:26:15 +0000 347) 	ele.innerHTML = dt;
+d7439c02 (frazeeat          2017-04-10 22:26:15 +0000 348) }

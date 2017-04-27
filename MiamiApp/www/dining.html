@@ -14,19 +14,359 @@
 
   </div>
 <div class="pages">
-  <div data-page="map" class="page">
-    <div class="page-content">
-      <div class="content-block">
-
-<iframe
-  width="100%"
-  height="900"
-  frameborder="0" style="border:0" scrolling="yes"
-  src="http://miamioh.edu/hdrbs/dining/hours/index.html" allowfullscreen>
-</iframe>
-
-
-      </div>
+ <div data-page="home" class="page">
+  <!-- Search Bar -->
+  <form data-search-list=".list-block-search" data-search-in=".card-header" class="searchbar searchbar-init">
+    <div class="searchbar-input">
+      <input type="search" placeholder="Search"><a href="#" class="searchbar-clear"></a>
+    </div><a href="#" class="searchbar-cancel">Cancel</a>
+  </form>
+ 
+  <!-- Search Bar overlay -->
+  <div class="searchbar-overlay"></div>
+ 
+  <div class="page-content">
+    <!-- This block will be displayed if nothing found -->
+    <div class="content-block searchbar-not-found">
+      <div class="content-block-inner">Nothing found</div>
     </div>
+ 
+    <!-- This block will be displayed if anything found, and this list block is used a searbar target -->
+    <div class="cards-list list-block list-block-search searchbar-found">
+      <ul>
+     <li class="card">
+		<div class="card-header">Boulangerie</div>
+		<div class="card-content">
+		<div class="card-content-inner">
+		<b>Monday to Thursday</b>: 8:30 a.m.&#8211;6:00 p.m.</br><b>Friday</b>: 8:30 a.m.&#8211;3:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br>
+		</div>
+		 </div>
+		 <div class="card-footer"> <a href="#" onclick="window.open('https://www.google.com/maps/place/Armstrong+Student+Center/@39.5077525,-84.7353907,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0a24a58913:0xe4bcf1ecfe44ec0f!8m2!3d39.5077525!4d-84.733202', '_system');">Map</a>
+ <a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/armstrong/boulangerie/index.html', '_system');">Menu</a> </div>
+		</li>
+     <li class="card">
+		<div class="card-header">Emporium</div>
+		<div class="card-content">
+		<div class="card-content-inner">
+		<b>Monday to Thursday</b>: 7:00 a.m.&#8211;2:00 a.m.</br><b>Friday</b>: 7:00 a.m.&#8211;2:00 a.m.</br><b>Saturday</b>:  9:00 a.m.&#8211;2:00 a.m.</br><b>Sunday</b>:  7:00 a.m.&#8211;2:00 a.m.</br>
+		</div>
+		 </div>
+		 <div class="card-footer"> <a href="#" onclick="window.open('https://www.google.com/maps/place/Armstrong+Student+Center/@39.5077525,-84.7353907,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0a24a58913:0xe4bcf1ecfe44ec0f!8m2!3d39.5077525!4d-84.733202', '_system');">Map</a>
+ <a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/armstrong/emporium/index.html', '_system');">Menu</a> </div>
+		 </li>
+
+ 		 <li class="card">
+		<div class="card-header">Miami Ice</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:00 a.m.&#8211;10:00 p.m.</br><b>Friday</b>: 7:00 a.m.&#8211;10:00 p.m.</br><b>Saturday</b>: 9:00 a.m.&#8211;10:00 p.m.</br><b>Sunday</b>: 9:00 a.m.&#8211;10:00 p.m.</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Armstrong+Student+Center/@39.5077525,-84.7353907,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0a24a58913:0xe4bcf1ecfe44ec0f!8m2!3d39.5077525!4d-84.733202', '_system');">Map</a>
+ <a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/armstrong/miami-ice/index.html', '_system');">Menu</a></div>
+		</li> 
+	 
+		<li class="card">
+		<div class="card-header">Mein Street</div>
+		<div class="card-content">
+				<div class="card-content-inner"><h3>Wing Bar</h3><p><b>Monday to Thursday</b>: 10:45 a.m.&#8211;10:00 p.m.</br><b>Friday</b>: 10:45 a.m.&#8211;8:00 p.m.</br><b>Saturday</b>: 11:00 a.m.&#8211;3:00 p.m.</br><b>Sunday</b>: 11:00 a.m.&#8211;3:00 p.m.</br></p><h3>Mein Street</h3><p><b>Monday to Thursday</b>: 10:45 a.m.&#8211;9:00 p.m.</br><b>Friday</b>: 10:45 a.m.&#8211;8:00 p.m.</br><b>Saturday</b>: 11:00 a.m.&#8211;3:00 p.m</br><b>Sunday</b>: 11:00 a.m.&#8211;3:00 p.m</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Armstrong+Student+Center/@39.5077525,-84.7353907,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0a24a58913:0xe4bcf1ecfe44ec0f!8m2!3d39.5077525!4d-84.733202', '_system');">Map</a>
+ <a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/armstrong/mein-street/index.html', '_system');">Menu</a></div>
+		</li>
+	
+		<li class="card">
+		<div class="card-header">Pulley Diner</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: Open 24 Hours</br><b>Friday</b>: Open 24 Hours</br><b>Saturday</b>: Open 24 Hours</br><b>Sunday</b>: Open 24 Hours</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Armstrong+Student+Center/@39.5077525,-84.7353907,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0a24a58913:0xe4bcf1ecfe44ec0f!8m2!3d39.5077525!4d-84.733202', '_system');">Map</a>
+ <a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/armstrong/pulley-diner/index.html', '_system');">Menu</a></div>
+		</li>
+
+		<li class="card">
+		<div class="card-header">Sundial Pizza Company</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 10:45 a.m.&#8211;10:00 p.m.</br><b>Friday</b>: 10:45 a.m.&#8211;8:00 p.m.</br><b>Saturday</b>: 11:00 a.m.&#8211;8:00 p.m.</br><b>Sunday</b>: 11:00 a.m.&#8211;8:00 p.m.</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Armstrong+Student+Center/@39.5077525,-84.7353907,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0a24a58913:0xe4bcf1ecfe44ec0f!8m2!3d39.5077525!4d-84.733202', '_system');">Map</a>
+ <a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/armstrong/sundial-pizza-co./index.html', '_system');">Menu</a></div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Miami Traditions</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 10:45 a.m.&#8211;8:00 p.m.</br><b>Friday</b>: 10:45 a.m.&#8211;3:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Armstrong+Student+Center/@39.5077525,-84.7353907,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0a24a58913:0xe4bcf1ecfe44ec0f!8m2!3d39.5077525!4d-84.733202', '_system');">Map</a>
+ <a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/armstrong/traditions/index.html', '_system');">Menu</a></div>
+		</li>
+
+		<li class="card">
+		<div class="card-header">Campus Grill</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:30 a.m.&#8211;8:00 p.m.</br><b>Friday</b>: 7:30 a.m.&#8211;2:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Bell+Tower+Place/@39.5099486,-84.737971,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0b7492ef81:0x3e5d103f7b0f9c13!8m2!3d39.5099486!4d-84.7357823', '_system');">Map</a>
+</div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Starbucksi (Bell Tower Place)</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:30 a.m.&#8211;8:00 p.m.</br><b>Friday</b>: 7:30 a.m.&#8211;2:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Bell+Tower+Place/@39.5099486,-84.737971,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0b7492ef81:0x3e5d103f7b0f9c13!8m2!3d39.5099486!4d-84.7357823', '_system');">Map</a>
+</div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Pastato</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:30 a.m.&#8211;8:00 p.m.</br><b>Friday</b>: 7:30 a.m.&#8211;2:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Bell+Tower+Place/@39.5099486,-84.737971,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0b7492ef81:0x3e5d103f7b0f9c13!8m2!3d39.5099486!4d-84.7357823', '_system');">Map</a>
+</div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Pizza Pi</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:30 a.m.&#8211;8:00 p.m.</br><b>Friday</b>: 7:30 a.m.&#8211;2:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Bell+Tower+Place/@39.5099486,-84.737971,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0b7492ef81:0x3e5d103f7b0f9c13!8m2!3d39.5099486!4d-84.7357823', '_system');">Map</a>
+</div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Sonora Stop</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:30 a.m.&#8211;8:00 p.m.</br><b>Friday</b>: 7:30 a.m.&#8211;2:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Bell+Tower+Place/@39.5099486,-84.737971,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0b7492ef81:0x3e5d103f7b0f9c13!8m2!3d39.5099486!4d-84.7357823', '_system');">Map</a>
+</div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Wok this way</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:30 a.m.&#8211;8:00 p.m.</br><b>Friday</b>: 7:30 a.m.&#8211;2:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Bell+Tower+Place/@39.5099486,-84.737971,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0b7492ef81:0x3e5d103f7b0f9c13!8m2!3d39.5099486!4d-84.7357823', '_system');">Map</a>
+</div>
+		</li>
+
+		<li class="card">
+		<div class="card-header">Uncle Phil's Deli</div>
+		<div class="card-content">
+		<div class="card-content-inner"><b>Monday to Thursday</b>: 7:30 a.m.&#8211;8:00 p.m.</br><b>Friday</b>: 7:30 a.m.&#8211;2:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"> <a href="#" onclick="window.open('https://www.google.com/maps/place/Bell+Tower+Place/@39.5099486,-84.737971,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0b7492ef81:0x3e5d103f7b0f9c13!8m2!3d39.5099486!4d-84.7357823', '_system');">Map</a><a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/bell-tower/uncle-phil-deli/index.html', '_system');">Menu</a></div>
+		</li>
+
+		<li class="card">
+		<div class="card-header">Dividends</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:45 a.m.&#8211;5:00 p.m.</br><b>Friday</b>: 7:45 a.m.&#8211;2:30 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"> <a href="#" onclick="window.open('https://www.google.com/maps/place/Farmer+School+of+Business/@39.5113417,-84.7319432,17z/data=!3m1!4b1!4m5!3m4!1s0x88403da0252af58b:0xff3c9ac9122d97ea!8m2!3d39.5113417!4d-84.7297545', '_system');">Map</a><a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/dividends/index.html', '_system');">Menu</a> </div>
+		</li>
+
+		<li class="card">
+		<div class="card-header">King Cafe</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:00 a.m.&#8211;11:00 p.m.</br><b>Friday</b>: 7:00 a.m.&#8211;5:00 p.m.</br><b>Saturday</b>: 11:00 a.m.&#8211;3:00 p.m.</br><b>Sunday</b>: 10:00 a.m.&#8211;11:00 p.m.</br></div>
+		</div>
+		<div class="card-footer"> <a href="#" onclick="window.open('https://www.google.com/maps/place/Edgar+W+King+Library/@39.5088094,-84.7401628,17z/data=!3m2!4b1!5s0x88403d0c697f86ab:0xf176e21282b03cb0!4m5!3m4!1s0x88403d0c4b7b3edb:0x8b05e86eba2adc82!8m2!3d39.5088094!4d-84.7379741', '_system');">Map</a><a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/king-cafe/menus/index.html', '_system');">Menu</a></div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Americas</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 10:45 a.m.&#8211;7:00 p.m.</br><b>Friday</b>: 10:45 a.m.&#8211;7:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Maplestreet+Station/@39.5043724,-84.7338705,17.98z/data=!4m13!1m7!3m6!1s0x88403d084bcc85ad:0x9b46a6e581b95092!2s571+Maple+St,+Oxford,+OH+45056!3b1!8m2!3d39.5041399!4d-84.7330404!3m4!1s0x0:0xd3435d9e95cdad34!8m2!3d39.5042684!4d-84.7324546', '_system');">Map</a><a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/maple-street/americas/index.html', '_system');">Menu</a></div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Delish</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 10:45 a.m.&#8211;9:00 p.m.</br><b>Friday</b>: 10:45 a.m.&#8211;9:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Maplestreet+Station/@39.5043724,-84.7338705,17.98z/data=!4m13!1m7!3m6!1s0x88403d084bcc85ad:0x9b46a6e581b95092!2s571+Maple+St,+Oxford,+OH+45056!3b1!8m2!3d39.5041399!4d-84.7330404!3m4!1s0x0:0xd3435d9e95cdad34!8m2!3d39.5042684!4d-84.7324546', '_system');">Map</a><a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/maple-street/delish/index.html', '_system');">Menu</a></div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Encounter</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 10:45 a.m.&#8211;9:00 p.m.</br><b>Friday</b>: 10:45 a.m.&#8211;9:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Maplestreet+Station/@39.5043724,-84.7338705,17.98z/data=!4m13!1m7!3m6!1s0x88403d084bcc85ad:0x9b46a6e581b95092!2s571+Maple+St,+Oxford,+OH+45056!3b1!8m2!3d39.5041399!4d-84.7330404!3m4!1s0x0:0xd3435d9e95cdad34!8m2!3d39.5042684!4d-84.7324546', '_system');">Map</a><a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/maple-street/encounter/index.html', '_system');">Menu</a></div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">First Stop</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 8:00 a.m.&#8211;3:00 p.m.</br><b>Friday</b>: 8:00 a.m.&#8211;3:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Maplestreet+Station/@39.5043724,-84.7338705,17.98z/data=!4m13!1m7!3m6!1s0x88403d084bcc85ad:0x9b46a6e581b95092!2s571+Maple+St,+Oxford,+OH+45056!3b1!8m2!3d39.5041399!4d-84.7330404!3m4!1s0x0:0xd3435d9e95cdad34!8m2!3d39.5042684!4d-84.7324546', '_system');">Map</a><a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/maple-street/first-stop/index.html', '_system');">Menu</a></div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Pacific Rim</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 10:45 a.m.&#8211;8:00 p.m.</br><b>Friday</b>: 10:45 a.m.&#8211;8:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Maplestreet+Station/@39.5043724,-84.7338705,17.98z/data=!4m13!1m7!3m6!1s0x88403d084bcc85ad:0x9b46a6e581b95092!2s571+Maple+St,+Oxford,+OH+45056!3b1!8m2!3d39.5041399!4d-84.7330404!3m4!1s0x0:0xd3435d9e95cdad34!8m2!3d39.5042684!4d-84.7324546', '_system');">Map</a><a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/maple-street/pacific-rim/index.html', '_system');">Menu</a></div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Starbucks (Maple Street)</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:00 a.m.&#8211;9:00 p.m.</br><b>Friday</b>: 7:00 a.m.&#8211;9:00 p.m.</br><b>Saturday</b>: 7:00 a.m.&#8211;9:00 p.m.</br><b>Sunday</b>: 7:00 a.m.&#8211;9:00 p.m.</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Maplestreet+Station/@39.5043724,-84.7338705,17.98z/data=!4m13!1m7!3m6!1s0x88403d084bcc85ad:0x9b46a6e581b95092!2s571+Maple+St,+Oxford,+OH+45056!3b1!8m2!3d39.5041399!4d-84.7330404!3m4!1s0x0:0xd3435d9e95cdad34!8m2!3d39.5042684!4d-84.7324546', '_system');">Map</a><a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/maple-street/starbucks/index.html', '_system');">Menu</a></div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">The Q</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 9:00 a.m.&#8211;10:00 p.m.</br><b>Friday</b>: 9:00 a.m.&#8211;8:00 p.m.</br><b>Saturday</b>: 11:00 a.m.&#8211;8:00 p.m.</br><b>Sunday</b>: 11:00 a.m.&#8211;10:00 p.m.</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Maplestreet+Station/@39.5043724,-84.7338705,17.98z/data=!4m13!1m7!3m6!1s0x88403d084bcc85ad:0x9b46a6e581b95092!2s571+Maple+St,+Oxford,+OH+45056!3b1!8m2!3d39.5041399!4d-84.7330404!3m4!1s0x0:0xd3435d9e95cdad34!8m2!3d39.5042684!4d-84.7324546', '_system');">Map</a><a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/maple-street/the-q/index.html', '_system');">Menu</a></div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Market Street at MacCracken</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 8:30 a.m.&#8211;11:00 p.m.</br><b>Friday</b>: 8:30 a.m.&#8211;11:00 p.m.</br><b>Saturday</b>: 10:30 a.m.&#8211;11:00 p.m.</br><b>Sunday</b>: 10:30 a.m.&#8211;11:00 p.m.</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/MacCracken+Hall,+Oxford,+OH+45056/@39.5043742,-84.7367316,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d08e01264a5:0xf83e3e3a0af1a612!8m2!3d39.5041561!4d-84.7346202', '_system');">Map</a></div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Martin Buffet </div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:30 a.m.&#8211;10:30 a.m.<br/>
+						5:00 p.m.&#8211;8:00 p.m.</br><b>Friday</b>: 7:30 a.m.&#8211;10:30 a.m.</br><b>Saturday</b>: 11:00 a.m.&#8211;2:00 p.m.</br><b>Sunday</b>: 11:00 a.m.&#8211;8:00 p.m.*</br>	</div>
+				</div>
+				<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Maplestreet+Station/@39.5043002,-84.7348805,17z/data=!4m13!1m7!3m6!1s0x88403d084bcc85ad:0x9b46a6e581b95092!2s571+Maple+St,+Oxford,+OH+45056!3b1!8m2!3d39.5041399!4d-84.7330404!3m4!1s0x0:0xd3435d9e95cdad34!8m2!3d39.5042684!4d-84.7324546', '_system');">Map</a>
+				
+				<a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/martin-dining-center/martin-buffet/index.html', '_system');">Menu</a>		
+				</div>
+				</li>
+
+
+		<li class="card">
+		<div class="card-header">Scoreboard Market</div>
+		<div class="card-content">
+				<div class="card-content-inner"> <b>Monday to Thursday</b>: 10:00 a.m.&#8211;10:00 p.m.</br><b>Friday</b>: 10:00 a.m.&#8211;10:00 p.m.</br><b>Saturday</b>: 10:00 a.m.&#8211;10:00 p.m.</br><b>Sunday</b>: 10:00 a.m.&#8211;10:00 p.m.</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Maplestreet+Station/@39.5043002,-84.7348805,17z/data=!4m13!1m7!3m6!1s0x88403d084bcc85ad:0x9b46a6e581b95092!2s571+Maple+St,+Oxford,+OH+45056!3b1!8m2!3d39.5041399!4d-84.7330404!3m4!1s0x0:0xd3435d9e95cdad34!8m2!3d39.5042684!4d-84.7324546', '_system');">Map</a>
+		
+		<a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/martin-dining-center/scorebard-market/index.html', '_system');">Menu</a>		
+		</div>
+		</li>
+
+
+	
+		<li class="card">
+		<div class="card-header">The Pro Shop</div>
+		<div class="card-content">
+				<div class="card-content-inner"> <b>Monday to Thursday</b>: 6:00 a.m.&#8211;11:00 p.m.</br><b>Friday</b>: 6:00 a.m.&#8211;11:00 p.m.</br><b>Saturday</b>: 8:00 a.m.&#8211;11:00 p.m.</br><b>Sunday</b>: 10:00 a.m.&#8211;11:00 p.m.</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Miami+University+Recreational+Sports+Center/@39.5026127,-84.740113,17z/data=!3m1!4b1!4m5!3m4!1s0x88403d0f5d275317:0x880d79f3a7bfb0ab!8m2!3d39.5026127!4d-84.7379243', '_system');">Map</a>
+		
+		</div>
+		</li>
+	
+	
+		<li class="card">
+		<div class="card-header"> </div>
+		<div class="card-content">
+				<div class="card-content-inner"> <h3>Western Dining Buffet</h3><p><b>Monday to Thursday</b>: 7:30 a.m.&#8211;8:00 p.m.*</br><b>Friday</b>: 7:30 a.m.&#8211;8:00 p.m.*</br><b>Saturday</b>: 10:30 a.m.&#8211;7:00 p.m.*</br><b>Sunday</b>: 10:30 a.m.&#8211;8:00 p.m.*</br></p><h3>Western Dining Continental Breakfast</h3><p><b>Monday to Thursday</b>: CLOSED</br><b>Friday</b>: CLOSED</br><b>Saturday</b>: 9:00 a.m.&#8211;10:30 a.m.</br><b>Sunday</b>: 9:00 a.m.&#8211;10:30 a.m.</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Western+Dining+Commons,+Oxford,+OH+45056/@39.5046426,-84.7303054,17z/data=!3m1!4b1!4m5!3m4!1s0x88403da6f100f4a7:0x7dbb2ff83c8ad81!8m2!3d39.5045637!4d-84.7280463', '_system');">Map</a>
+		
+		<a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/western-dining-common/western-buffet/index.html', '_system');">Menu</a>		
+		</div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Tea Hive</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:30 a.m.&#8211;8:00 p.m.</br><b>Friday</b>: 7:30 a.m.&#8211;8:00 p.m.</br><b>Saturday</b>: Closed</br><b>Sunday</b>: Closed</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Western+Dining+Commons,+Oxford,+OH+45056/@39.5046426,-84.7303054,17z/data=!3m1!4b1!4m5!3m4!1s0x88403da6f100f4a7:0x7dbb2ff83c8ad81!8m2!3d39.5045637!4d-84.7280463', '_system');">Map</a>
+		
+		<a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/western-dining-common/tea-hive/index.html', '_system');">Menu</a>		
+		</div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">greystone</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 9:00 a.m.&#8211;10:00 p.m.</br><b>Friday</b>: 9:00 a.m.&#8211;8:00 p.m.</br><b>Saturday</b>: 11:00 a.m.&#8211;8:00 p.m.</br><b>Sunday</b>: 11:00 a.m.&#8211;10:00 p.m.</br></div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Western+Dining+Commons,+Oxford,+OH+45056/@39.5046426,-84.7303054,17z/data=!3m1!4b1!4m5!3m4!1s0x88403da6f100f4a7:0x7dbb2ff83c8ad81!8m2!3d39.5045637!4d-84.7280463', '_system');">Map</a>
+				
+		</div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header"> Garden Commons Buffet</div>
+		<div class="card-content">
+				<div class="card-content-inner"><h3>Garden Commons Buffet</h3><p><b>Monday to Thursday</b>: 7:30 a.m.&#8211;8:00 p.m.*</br><b>Friday</b>: 7:30 a.m.&#8211;8:00 p.m.*</br><b>Saturday</b>: 10:30 a.m.&#8211;8:00 p.m.*</br><b>Sunday</b>: 10:30 a.m.&#8211;8:00 p.m.*</br></p><h3>Garden Commons Continental Breakfast</h3><p><b>Monday to Thursday</b>: CLOSED</br><b>Friday</b>: CLOSED</br><b>Saturday</b>: 9:00 a.m.&#8211;10:30 a.m.</br><b>Sunday</b>: 9:00 a.m.&#8211;10:30 a.m.</br> </div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Garden+Commons/@39.5121273,-84.7324855,16.9z/data=!4m5!3m4!1s0x88403d9f8ad387a5:0xa86cb0408ecc6a1f!8m2!3d39.5121069!4d-84.7301546', '_system');">Map</a>
+		
+		<a href="#" onclick="window.open('http://miamioh.edu/hdrbs/dining/places-to-eat/places/garden-commons/garden-buffet/index.html', '_system');">Menu</a>		
+		</div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Garden To Go</div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 7:30 a.m.&#8211;9:00 p.m.</br><b>Friday</b>: 7:30 a.m.&#8211;9:00 p.m.</br><b>Saturday</b>: 11:00 a.m.&#8211;8:00 p.m.</br><b>Sunday</b>: 11:00 a.m.&#8211;9:00 p.m.</br> </div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Garden+Commons/@39.5121273,-84.7324855,16.9z/data=!4m5!3m4!1s0x88403d9f8ad387a5:0xa86cb0408ecc6a1f!8m2!3d39.5121069!4d-84.7301546', '_system');">Map</a>
+		
+		</div>
+		</li>
+
+
+		<li class="card">
+		<div class="card-header">Dorsey Market </div>
+		<div class="card-content">
+				<div class="card-content-inner"><b>Monday to Thursday</b>: 8:00 a.m.&#8211;11:00 p.m.</br><b>Friday</b>: 8:00 a.m.&#8211;9:00 p.m.</br><b>Saturday</b>: 10:00 a.m.&#8211;9:00 p.m.</br><b>Sunday</b>: 10:00 a.m.&#8211;11:00 p.m.</br> </div>
+		</div>
+		<div class="card-footer"><a href="#" onclick="window.open('https://www.google.com/maps/place/Dorsey+Market/@39.5121092,-84.7369124,14.29z/data=!4m8!1m2!2m1!1sdorsey+market!3m4!1s0x88403da1b880fb07:0x8566e0bbd954b607!8m2!3d39.5106008!4d-84.7281195', '_system');">Map</a>
+		
+		</div>
+		</li>
+
+
+
+      </ul>
+    </div>
+
   </div>
+</div> 
 </div>
